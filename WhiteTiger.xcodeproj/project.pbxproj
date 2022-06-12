@@ -14,6 +14,10 @@
 		89790C6228546AF9007853BA /* WhiteTigerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C6128546AF9007853BA /* WhiteTigerTests.swift */; };
 		89790C6C28546AF9007853BA /* WhiteTigerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C6B28546AF9007853BA /* WhiteTigerUITests.swift */; };
 		89790C6E28546AF9007853BA /* WhiteTigerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C6D28546AF9007853BA /* WhiteTigerUITestsLaunchTests.swift */; };
+		89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C7A28546B80007853BA /* ArtistMainView.swift */; };
+		89790C7D285471DA007853BA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C7C285471DA007853BA /* TestView.swift */; };
+		89790C802854E7A5007853BA /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = 89790C7F2854E7A4007853BA /* shapes.riv */; };
+		89790C832854E908007853BA /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 89790C822854E908007853BA /* RiveRuntime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		89790C6728546AF9007853BA /* WhiteTigerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteTigerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89790C6B28546AF9007853BA /* WhiteTigerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTigerUITests.swift; sourceTree = "<group>"; };
 		89790C6D28546AF9007853BA /* WhiteTigerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTigerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		89790C7A28546B80007853BA /* ArtistMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMainView.swift; sourceTree = "<group>"; };
+		89790C7C285471DA007853BA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		89790C7F2854E7A4007853BA /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89790C832854E908007853BA /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				89790C4F28546AF8007853BA /* WhiteTiger */,
+				89790C7E2854E734007853BA /* RiveAssets */,
 				89790C6028546AF9007853BA /* WhiteTigerTests */,
 				89790C6A28546AF9007853BA /* WhiteTigerUITests */,
 				89790C4E28546AF8007853BA /* Products */,
@@ -96,6 +105,8 @@
 			children = (
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
+				89790C7A28546B80007853BA /* ArtistMainView.swift */,
+				89790C7C285471DA007853BA /* TestView.swift */,
 				89790C5428546AF9007853BA /* Assets.xcassets */,
 				89790C5628546AF9007853BA /* Preview Content */,
 			);
@@ -127,6 +138,14 @@
 			path = WhiteTigerUITests;
 			sourceTree = "<group>";
 		};
+		89790C7E2854E734007853BA /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+				89790C7F2854E7A4007853BA /* shapes.riv */,
+			);
+			path = RiveAssets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +162,9 @@
 			dependencies = (
 			);
 			name = WhiteTiger;
+			packageProductDependencies = (
+				89790C822854E908007853BA /* RiveRuntime */,
+			);
 			productName = WhiteTiger;
 			productReference = 89790C4D28546AF8007853BA /* WhiteTiger.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 89790C4428546AF8007853BA;
+			packageReferences = (
+				89790C812854E908007853BA /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			productRefGroup = 89790C4E28546AF8007853BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89790C5828546AF9007853BA /* Preview Assets.xcassets in Resources */,
+				89790C802854E7A5007853BA /* shapes.riv in Resources */,
 				89790C5528546AF9007853BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89790C7D285471DA007853BA /* TestView.swift in Sources */,
+				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,
 				89790C5328546AF9007853BA /* ContentView.swift in Sources */,
 				89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */,
 			);
@@ -583,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89790C812854E908007853BA /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89790C822854E908007853BA /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89790C812854E908007853BA /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89790C4528546AF8007853BA /* Project object */;
 }
