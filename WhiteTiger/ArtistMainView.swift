@@ -13,26 +13,33 @@ struct ArtistMainView: View {
         ZStack {
             background
             
-            VStack(alignment: .leading, spacing: 8) {
-                Image("jojiP1")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
-                Text("JOJI")
-                    .font(.title)
-                    .bold()
-                Text("Singer, Writer, Producer ")
+            ScrollView(showsIndicators: false) {
+                content
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-            .padding()
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 15))
-                
         }
-        .padding()
+    }
+    
+    var content: some View {
+        VStack(spacing: 8) {
+            ArtistProfileCard()
+                .mask(RoundedRectangle(cornerRadius: 20))
+                .frame(minHeight: 500)
+            
+            VStack(spacing: 4) {
+                Text("ABOUT")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.title3.bold())
+                Text("George Kusunoki Miller better known by his stage name Joji and formerly by his online aliases Filthy Frank and Pink Guy, is a Japanese artist, singer, writer, and performer.")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.body)
+                    .opacity(0.7)
+            }
+            .padding(20)
+            
+            RecentCard()
         
-        
-        
+        }
+        .padding(20)
     }
     
     var background: some View {

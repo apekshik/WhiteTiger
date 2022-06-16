@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891A4C5A285B019800538E38 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C59285B019800538E38 /* FirebaseAnalytics */; };
+		891A4C5C285B019800538E38 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C5B285B019800538E38 /* FirebaseAnalyticsSwift */; };
+		891A4C5E285B019800538E38 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C5D285B019800538E38 /* FirebaseAppCheck */; };
+		891A4C60285B019800538E38 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C5F285B019800538E38 /* FirebaseAuth */; };
+		891A4C62285B019800538E38 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C61285B019800538E38 /* FirebaseCrashlytics */; };
+		891A4C64285B019800538E38 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C63285B019800538E38 /* FirebaseDatabase */; };
+		891A4C66285B019800538E38 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C65285B019800538E38 /* FirebaseDatabaseSwift */; };
+		891A4C68285B019800538E38 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C67285B019800538E38 /* FirebaseDynamicLinks */; };
+		891A4C6A285B019800538E38 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C69285B019800538E38 /* FirebaseFirestore */; };
+		891A4C6C285B019800538E38 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C6B285B019800538E38 /* FirebaseFirestoreSwift */; };
+		891A4C6E285B019800538E38 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C6D285B019800538E38 /* FirebaseFunctions */; };
+		891A4C70285B019800538E38 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C6F285B019800538E38 /* FirebaseInstallations */; };
+		891A4C72285B019800538E38 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C71285B019800538E38 /* FirebaseMessaging */; };
+		891A4C74285B019800538E38 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C73285B019800538E38 /* FirebasePerformance */; };
+		891A4C76285B019800538E38 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C75285B019800538E38 /* FirebaseRemoteConfig */; };
+		891A4C78285B019800538E38 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C77285B019800538E38 /* FirebaseRemoteConfigSwift */; };
+		891A4C7A285B019800538E38 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C79285B019800538E38 /* FirebaseStorage */; };
+		891A4C7D285B080800538E38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891A4C7C285B080800538E38 /* GoogleService-Info.plist */; };
+		891A4C7E285B080800538E38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891A4C7C285B080800538E38 /* GoogleService-Info.plist */; };
+		891A4C7F285B080800538E38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891A4C7C285B080800538E38 /* GoogleService-Info.plist */; };
+		891A4C81285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
+		891A4C82285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
+		891A4C83285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
+		894076C4285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */; };
+		894076C8285870F20036A670 /* RecentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894076C7285870F20036A670 /* RecentCard.swift */; };
 		89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C5028546AF8007853BA /* WhiteTigerApp.swift */; };
 		89790C5328546AF9007853BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C5228546AF9007853BA /* ContentView.swift */; };
 		89790C5528546AF9007853BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89790C5428546AF9007853BA /* Assets.xcassets */; };
@@ -18,6 +43,7 @@
 		89790C7D285471DA007853BA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C7C285471DA007853BA /* TestView.swift */; };
 		89790C802854E7A5007853BA /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = 89790C7F2854E7A4007853BA /* shapes.riv */; };
 		89790C832854E908007853BA /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 89790C822854E908007853BA /* RiveRuntime */; };
+		89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C842855AED0007853BA /* ArtistProfileCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		891A4C7C285B080800538E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		891A4C80285B088B00538E38 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Joji - Glimpse of Us (Official Video).mp4"; sourceTree = "<group>"; };
+		894076C7285870F20036A670 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
 		89790C4D28546AF8007853BA /* WhiteTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89790C5028546AF8007853BA /* WhiteTigerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTigerApp.swift; sourceTree = "<group>"; };
 		89790C5228546AF9007853BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +81,7 @@
 		89790C7A28546B80007853BA /* ArtistMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMainView.swift; sourceTree = "<group>"; };
 		89790C7C285471DA007853BA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		89790C7F2854E7A4007853BA /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
+		89790C842855AED0007853BA /* ArtistProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistProfileCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891A4C66285B019800538E38 /* FirebaseDatabaseSwift in Frameworks */,
+				891A4C5E285B019800538E38 /* FirebaseAppCheck in Frameworks */,
+				891A4C74285B019800538E38 /* FirebasePerformance in Frameworks */,
+				891A4C72285B019800538E38 /* FirebaseMessaging in Frameworks */,
+				891A4C70285B019800538E38 /* FirebaseInstallations in Frameworks */,
+				891A4C60285B019800538E38 /* FirebaseAuth in Frameworks */,
+				891A4C6E285B019800538E38 /* FirebaseFunctions in Frameworks */,
+				891A4C76285B019800538E38 /* FirebaseRemoteConfig in Frameworks */,
+				891A4C6A285B019800538E38 /* FirebaseFirestore in Frameworks */,
+				891A4C78285B019800538E38 /* FirebaseRemoteConfigSwift in Frameworks */,
+				891A4C5C285B019800538E38 /* FirebaseAnalyticsSwift in Frameworks */,
+				891A4C7A285B019800538E38 /* FirebaseStorage in Frameworks */,
+				891A4C6C285B019800538E38 /* FirebaseFirestoreSwift in Frameworks */,
+				891A4C62285B019800538E38 /* FirebaseCrashlytics in Frameworks */,
+				891A4C68285B019800538E38 /* FirebaseDynamicLinks in Frameworks */,
+				891A4C5A285B019800538E38 /* FirebaseAnalytics in Frameworks */,
+				891A4C64285B019800538E38 /* FirebaseDatabase in Frameworks */,
 				89790C832854E908007853BA /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,10 +127,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		891A4C7B285B04D200538E38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				891A4C80285B088B00538E38 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		894076C2285870230036A670 /* VideoAssets */ = {
+			isa = PBXGroup;
+			children = (
+				894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */,
+			);
+			path = VideoAssets;
+			sourceTree = "<group>";
+		};
 		89790C4428546AF8007853BA = {
 			isa = PBXGroup;
 			children = (
 				89790C4F28546AF8007853BA /* WhiteTiger */,
+				894076C2285870230036A670 /* VideoAssets */,
 				89790C7E2854E734007853BA /* RiveAssets */,
 				89790C6028546AF9007853BA /* WhiteTigerTests */,
 				89790C6A28546AF9007853BA /* WhiteTigerUITests */,
@@ -103,11 +168,15 @@
 		89790C4F28546AF8007853BA /* WhiteTiger */ = {
 			isa = PBXGroup;
 			children = (
+				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
 				89790C7A28546B80007853BA /* ArtistMainView.swift */,
+				89790C842855AED0007853BA /* ArtistProfileCard.swift */,
+				894076C7285870F20036A670 /* RecentCard.swift */,
 				89790C7C285471DA007853BA /* TestView.swift */,
 				89790C5428546AF9007853BA /* Assets.xcassets */,
+				891A4C7B285B04D200538E38 /* Models */,
 				89790C5628546AF9007853BA /* Preview Content */,
 			);
 			path = WhiteTiger;
@@ -164,6 +233,23 @@
 			name = WhiteTiger;
 			packageProductDependencies = (
 				89790C822854E908007853BA /* RiveRuntime */,
+				891A4C59285B019800538E38 /* FirebaseAnalytics */,
+				891A4C5B285B019800538E38 /* FirebaseAnalyticsSwift */,
+				891A4C5D285B019800538E38 /* FirebaseAppCheck */,
+				891A4C5F285B019800538E38 /* FirebaseAuth */,
+				891A4C61285B019800538E38 /* FirebaseCrashlytics */,
+				891A4C63285B019800538E38 /* FirebaseDatabase */,
+				891A4C65285B019800538E38 /* FirebaseDatabaseSwift */,
+				891A4C67285B019800538E38 /* FirebaseDynamicLinks */,
+				891A4C69285B019800538E38 /* FirebaseFirestore */,
+				891A4C6B285B019800538E38 /* FirebaseFirestoreSwift */,
+				891A4C6D285B019800538E38 /* FirebaseFunctions */,
+				891A4C6F285B019800538E38 /* FirebaseInstallations */,
+				891A4C71285B019800538E38 /* FirebaseMessaging */,
+				891A4C73285B019800538E38 /* FirebasePerformance */,
+				891A4C75285B019800538E38 /* FirebaseRemoteConfig */,
+				891A4C77285B019800538E38 /* FirebaseRemoteConfigSwift */,
+				891A4C79285B019800538E38 /* FirebaseStorage */,
 			);
 			productName = WhiteTiger;
 			productReference = 89790C4D28546AF8007853BA /* WhiteTiger.app */;
@@ -239,6 +325,7 @@
 			mainGroup = 89790C4428546AF8007853BA;
 			packageReferences = (
 				89790C812854E908007853BA /* XCRemoteSwiftPackageReference "rive-ios" */,
+				891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 89790C4E28546AF8007853BA /* Products */;
 			projectDirPath = "";
@@ -256,7 +343,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894076C4285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 in Resources */,
 				89790C5828546AF9007853BA /* Preview Assets.xcassets in Resources */,
+				891A4C7D285B080800538E38 /* GoogleService-Info.plist in Resources */,
 				89790C802854E7A5007853BA /* shapes.riv in Resources */,
 				89790C5528546AF9007853BA /* Assets.xcassets in Resources */,
 			);
@@ -266,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891A4C7E285B080800538E38 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891A4C7F285B080800538E38 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +375,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				89790C7D285471DA007853BA /* TestView.swift in Sources */,
+				891A4C81285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,
 				89790C5328546AF9007853BA /* ContentView.swift in Sources */,
+				89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */,
+				894076C8285870F20036A670 /* RecentCard.swift in Sources */,
 				89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891A4C82285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C6228546AF9007853BA /* WhiteTigerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89790C6E28546AF9007853BA /* WhiteTigerUITestsLaunchTests.swift in Sources */,
+				891A4C83285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C6C28546AF9007853BA /* WhiteTigerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +579,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,6 +711,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		89790C812854E908007853BA /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios.git";
@@ -624,6 +730,91 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		891A4C59285B019800538E38 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		891A4C5B285B019800538E38 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		891A4C5D285B019800538E38 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		891A4C5F285B019800538E38 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		891A4C61285B019800538E38 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		891A4C63285B019800538E38 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		891A4C65285B019800538E38 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		891A4C67285B019800538E38 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		891A4C69285B019800538E38 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		891A4C6B285B019800538E38 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		891A4C6D285B019800538E38 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		891A4C6F285B019800538E38 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		891A4C71285B019800538E38 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		891A4C73285B019800538E38 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		891A4C75285B019800538E38 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		891A4C77285B019800538E38 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		891A4C79285B019800538E38 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 891A4C58285B019800538E38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		89790C822854E908007853BA /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89790C812854E908007853BA /* XCRemoteSwiftPackageReference "rive-ios" */;
