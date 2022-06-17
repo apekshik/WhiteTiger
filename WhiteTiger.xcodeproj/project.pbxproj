@@ -30,6 +30,9 @@
 		891A4C81285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
 		891A4C82285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
 		891A4C83285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
+		893D45E7285B8509000EF7AA /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* DBHandler.swift */; };
+		893D45E8285B8509000EF7AA /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* DBHandler.swift */; };
+		893D45E9285B8509000EF7AA /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* DBHandler.swift */; };
 		894076C4285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */; };
 		894076C8285870F20036A670 /* RecentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894076C7285870F20036A670 /* RecentCard.swift */; };
 		89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C5028546AF8007853BA /* WhiteTigerApp.swift */; };
@@ -66,6 +69,7 @@
 /* Begin PBXFileReference section */
 		891A4C7C285B080800538E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		891A4C80285B088B00538E38 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		893D45E6285B8509000EF7AA /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Joji - Glimpse of Us (Official Video).mp4"; sourceTree = "<group>"; };
 		894076C7285870F20036A670 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
 		89790C4D28546AF8007853BA /* WhiteTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,7 @@
 			children = (
 				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
+				893D45E6285B8509000EF7AA /* DBHandler.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
 				89790C7A28546B80007853BA /* ArtistMainView.swift */,
 				89790C842855AED0007853BA /* ArtistProfileCard.swift */,
@@ -380,6 +385,7 @@
 				89790C5328546AF9007853BA /* ContentView.swift in Sources */,
 				89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */,
 				894076C8285870F20036A670 /* RecentCard.swift in Sources */,
+				893D45E7285B8509000EF7AA /* DBHandler.swift in Sources */,
 				89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893D45E8285B8509000EF7AA /* DBHandler.swift in Sources */,
 				891A4C82285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C6228546AF9007853BA /* WhiteTigerTests.swift in Sources */,
 			);
@@ -399,6 +406,7 @@
 			files = (
 				89790C6E28546AF9007853BA /* WhiteTigerUITestsLaunchTests.swift in Sources */,
 				891A4C83285B088B00538E38 /* UserModel.swift in Sources */,
+				893D45E9285B8509000EF7AA /* DBHandler.swift in Sources */,
 				89790C6C28546AF9007853BA /* WhiteTigerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
