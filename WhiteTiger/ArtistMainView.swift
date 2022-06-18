@@ -22,7 +22,7 @@ struct ArtistMainView: View {
     var content: some View {
         VStack(spacing: 8) {
             
-            ArtistProfileCard(user: users[0])
+            ArtistProfileCard()
                 .mask(RoundedRectangle(cornerRadius: 20))
                 .frame(minHeight: 500)
             
