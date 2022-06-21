@@ -9,14 +9,16 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 
-let dbhandler = DBHandler()
 
 struct ArtistProfileCard: View {
-    @StateObject var dbhandler = DBHandler()
-        
+    @StateObject var fireManager = NFirestoreManager()
+    //@StateObject var storage = FirebaseStorageManager()
+    
+    
+    
     var body: some View {
         VStack {
-            if let user = dbhandler.userData {
+            if let user = fireManager.userData {
                 VStack(alignment: .leading) {
                 Spacer()
                 Text(user.artistName ?? "??")
@@ -28,16 +30,23 @@ struct ArtistProfileCard: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
             .padding()
-            .background(Image(user.profileUrl ?? "")
-                .resizable()
-                .scaledToFill()
-                .clipped()
-                .opacity(0.8)
-            )
+            .background(AsyncImage(url: fireManager.profileImageUrl) { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .clipped()
+                    .opacity(0.8)
+            } placeholder: {
+                Text("Image still Loading!!")
+            })
             .ignoresSafeArea()
             } else {
                 Text("Empty View!")
             }
+        }
+        .task {
+            await fireManager.loadUserData()
+            await fireManager.loadProfileImageUrl()
         }
     }
         

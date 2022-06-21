@@ -9,6 +9,7 @@ import SwiftUI
 import RiveRuntime
 
 struct ArtistMainView: View {
+    
     var body: some View {
         ZStack {
             background
