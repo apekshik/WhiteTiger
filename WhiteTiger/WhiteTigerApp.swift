@@ -14,7 +14,6 @@ struct WhiteTigerApp: App {
     init() {
         
         FirebaseApp.configure()
-        
     }
     
     var body: some Scene {
@@ -23,4 +22,5 @@ struct WhiteTigerApp: App {
             ArtistMainView()
         }
     }
+        
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import RiveRuntime
 
 struct ArtistMainView: View {
-    
+    @StateObject var videoManager = VideoManager()
     var body: some View {
         ZStack {
             background
@@ -38,10 +38,19 @@ struct ArtistMainView: View {
             }
             .padding(20)
             
-            RecentCard()
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(videoManager.videos) { video in
+                        RecentCard(video: video)
+                    }
+                }
+            }
         
         }
         .padding(20)
+        .task {
+            await videoManager.loadRecentVideos(ofArtist: "Joji")
+        }
     }
     
     var background: some View {

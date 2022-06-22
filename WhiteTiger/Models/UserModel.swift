@@ -26,13 +26,3 @@ struct UserModel: Codable {
                                             )
 }
 
-var users = [
-    UserModel(isArtist: true,
-              first: "George",
-              last: "Miller",
-              artistName: "Joji",
-              occupation: "Singer, Writer, Producer",
-              profileUrl: "jojiP1",
-              followers: 17600000
-             )
-]
