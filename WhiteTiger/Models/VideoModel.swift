@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseStorage
 
-struct VideoModel: Codable, Identifiable {
+struct VideoModel: Codable, Identifiable, Equatable {
     var id = UUID()
     var recentsAndHits: Bool?
     var title: String

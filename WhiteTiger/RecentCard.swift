@@ -23,7 +23,7 @@ struct RecentCard: View {
             
             textOverlay
         }
-        .frame(maxWidth: .infinity, maxHeight: 220, alignment: .leading)
+        .frame(maxWidth: .infinity, maxHeight: 300, alignment: .leading)
         .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 20))
         .cornerRadius(20)
     }
@@ -32,9 +32,8 @@ struct RecentCard: View {
     var videoPlayer: some View {
         VideoPlayer(player: player)
             .scaledToFill()
-            .onChange(of: video.videoUrlPath) { newValue in
-                guard let url = newValue else {return}
-                player = AVPlayer(url: url)
+            .onAppear {
+                player = AVPlayer(url: video.videoUrlPath!)
                 player.play()
             }
             .onTapGesture {
@@ -49,6 +48,7 @@ struct RecentCard: View {
                 impactHeavy.impactOccurred()
             }
             .opacity(0.56)
+            .frame(maxWidth: .infinity, maxHeight: 300)
             .background(.ultraThinMaterial)
 
     }

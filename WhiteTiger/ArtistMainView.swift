@@ -39,11 +39,15 @@ struct ArtistMainView: View {
             .padding(20)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+                HStack(spacing: 20) {
                     ForEach(videoManager.videos) { video in
                         RecentCard(video: video)
                     }
                 }
+                .onChange(of: videoManager.videos) { _ in
+                    print("VM loaded Recents Videos")
+                }
+                
             }
         
         }
