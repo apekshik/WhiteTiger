@@ -36,6 +36,9 @@
 		893124A12862CBB500155E9B /* Joji - Slow Dancing in the Dark (Live).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8931249D286243A900155E9B /* Joji - Slow Dancing in the Dark (Live).mp4 */; };
 		893124A22862CBB800155E9B /* Joji - Slow Dancing in the Dark (Official Video).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8931249E286243AA00155E9B /* Joji - Slow Dancing in the Dark (Official Video).mp4 */; };
 		893124A42863250C00155E9B /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A32863250C00155E9B /* VideoManager.swift */; };
+		893124A62865C92100155E9B /* TestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A52865C92100155E9B /* TestCard.swift */; };
+		893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */; };
+		893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124AB2865ED8A00155E9B /* ZStackTestView.swift */; };
 		893D45E7285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
 		893D45E8285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
 		893D45E9285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
@@ -84,6 +87,9 @@
 		8931249E286243AA00155E9B /* Joji - Slow Dancing in the Dark (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Joji - Slow Dancing in the Dark (Official Video).mp4"; sourceTree = "<group>"; };
 		8931249F2862456C00155E9B /* Joji - Can't Get Over You (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Joji - Can't Get Over You (Official Video).mp4"; sourceTree = "<group>"; };
 		893124A32863250C00155E9B /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		893124A52865C92100155E9B /* TestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCard.swift; sourceTree = "<group>"; };
+		893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHorizontalCardsView.swift; sourceTree = "<group>"; };
+		893124AB2865ED8A00155E9B /* ZStackTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackTestView.swift; sourceTree = "<group>"; };
 		893D45E6285B8509000EF7AA /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Joji - Glimpse of Us (Official Video).mp4"; path = "VideoAssets/Joji - Glimpse of Us (Official Video).mp4"; sourceTree = SOURCE_ROOT; };
 		894076C7285870F20036A670 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
@@ -156,6 +162,26 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		893124A72865C99C00155E9B /* LegacyFirebaseManagers */ = {
+			isa = PBXGroup;
+			children = (
+				893D45E6285B8509000EF7AA /* FirestoreManager.swift */,
+				896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */,
+			);
+			path = LegacyFirebaseManagers;
+			sourceTree = "<group>";
+		};
+		893124A82865C9E100155E9B /* TestViews */ = {
+			isa = PBXGroup;
+			children = (
+				89790C7C285471DA007853BA /* TestView.swift */,
+				893124A52865C92100155E9B /* TestCard.swift */,
+				893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */,
+				893124AB2865ED8A00155E9B /* ZStackTestView.swift */,
+			);
+			path = TestViews;
+			sourceTree = "<group>";
+		};
 		894076C2285870230036A670 /* VideoAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,14 +220,13 @@
 			children = (
 				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
-				893D45E6285B8509000EF7AA /* FirestoreManager.swift */,
-				896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */,
+				893124A72865C99C00155E9B /* LegacyFirebaseManagers */,
 				893124992861A45400155E9B /* NFirestoreManager.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
 				89790C7A28546B80007853BA /* ArtistMainView.swift */,
 				89790C842855AED0007853BA /* ArtistProfileCard.swift */,
 				894076C7285870F20036A670 /* RecentCard.swift */,
-				89790C7C285471DA007853BA /* TestView.swift */,
+				893124A82865C9E100155E9B /* TestViews */,
 				893124A32863250C00155E9B /* VideoManager.swift */,
 				89790C5428546AF9007853BA /* Assets.xcassets */,
 				891A4C7B285B04D200538E38 /* Models */,
@@ -405,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */,
 				89790C7D285471DA007853BA /* TestView.swift in Sources */,
 				891A4C81285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,
@@ -412,10 +438,12 @@
 				896F60BE285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */,
 				89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */,
 				8931249A2861A45500155E9B /* NFirestoreManager.swift in Sources */,
+				893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */,
 				894076C8285870F20036A670 /* RecentCard.swift in Sources */,
 				893D45E7285B8509000EF7AA /* FirestoreManager.swift in Sources */,
 				89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */,
 				8931249C2862422E00155E9B /* VideoModel.swift in Sources */,
+				893124A62865C92100155E9B /* TestCard.swift in Sources */,
 				893124A42863250C00155E9B /* VideoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,14 +18,10 @@ struct RecentCard: View {
     @State var video: VideoModel
     
     var body: some View {
-        ZStack(alignment: .leading) {
+        ZStack {
             videoPlayer
-            
             textOverlay
         }
-        .frame(maxWidth: .infinity, maxHeight: 300, alignment: .leading)
-        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 20))
-        .cornerRadius(20)
     }
     
     
@@ -48,7 +44,7 @@ struct RecentCard: View {
                 impactHeavy.impactOccurred()
             }
             .opacity(0.56)
-            .frame(maxWidth: .infinity, maxHeight: 300)
+            .frame(maxWidth: .infinity, maxHeight: 400)
             .background(.ultraThinMaterial)
 
     }
@@ -70,7 +66,7 @@ struct RecentCard: View {
             }
             .opacity(0.67)
         }
-        .frame(maxWidth: .infinity, maxHeight: 200, alignment: .topLeading)
+        .frame(maxWidth: .infinity, maxHeight: 300, alignment: .topLeading)
         .padding()
         .offset(y: 10)
         .foregroundColor(.white)
