@@ -15,7 +15,6 @@ struct TestHorizontalCardsView: View {
             LazyHStack {
                 ForEach(videos) { video in
                     TestCard(video: video)
-                        .frame(width: 300)
                 }
             }
         }

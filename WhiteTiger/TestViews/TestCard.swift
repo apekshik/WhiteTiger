@@ -20,14 +20,16 @@ struct TestCard: View {
                 videoPlayer
                     .mask(RoundedRectangle(cornerRadius: 20)
                         .frame(maxHeight: geo.frame(in: .local).height - 70, alignment: .center))
-
-                textOverlay
-                    .padding([.top, .bottom], 45)
-                    .padding([.leading, .trailing], 12)
+                    .overlay(alignment: .center, content: {
+                        textOverlay
+                            .padding([.top, .bottom], 45)
+                            .padding([.leading, .trailing], 12)
+                    })
+                
             }
         }
         .padding()
-        .frame(height: 380)
+        .frame(width: 350, height: 380)
     }
     
     var videoPlayer: some View {

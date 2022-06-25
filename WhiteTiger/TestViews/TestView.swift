@@ -15,7 +15,7 @@ struct TestView: View {
     var body: some View {
         
         ScrollView {
-            VStack(spacing: 20) {
+            VStack(spacing: 10) {
                 VStack(spacing: 8) {
                     ArtistProfileCard()
                         .mask(RoundedRectangle(cornerRadius: 20))
@@ -32,7 +32,6 @@ struct TestView: View {
                         .opacity(0.7)
                 }
                 
-                Spacer()
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
@@ -40,13 +39,14 @@ struct TestView: View {
                             TestCard(video: video)
                         }
                     }
+                    .offset(y: -30)
                 }
                 
                 Text("COMING LIVE NEXT ON")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.title3.bold())
                 
-                Text("14 highlights from Head In The Clouds 2021: Joji, NIKI, CL, Rich Brian, eaJ, BIBI, and more. Following the announcement of this year's festival, 88rising also teased a Jakarta edition of the music event, after its cancellation in the beginning of the pandemic.")
+                Text("14 highlights from Head In The Clouds 2021: Joji, NIKI, CL, Rich Brian, eaJ, BIBI, and more.")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.body)
                     .opacity(0.7)
