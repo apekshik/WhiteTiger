@@ -16,12 +16,26 @@ struct RecentCard: View {
     @State private var player = AVPlayer()
     @State private var playToggle: Bool = true
     @State var video: VideoModel
+    let testFootageUrl = Bundle.main.url(forResource: "Joji - Slow Dancing in the Dark (Official Video)", withExtension: "mp4")
     
     var body: some View {
         ZStack {
-            videoPlayer
-            textOverlay
+            GeometryReader { geo in
+                videoPlayer
+                    .mask(RoundedRectangle(cornerRadius: 20)
+                        .frame(maxHeight: geo.frame(in: .local).height - 75, alignment: .center))
+                    .overlay(alignment: .center, content: {
+                        textOverlay
+                            .frame(maxHeight: geo.frame(in: .local).height - 75, alignment: .center)
+                            .padding([.top, .bottom], 47)
+                            .padding([.leading, .trailing], 12)
+                    })
+                
+            }
         }
+        .padding()
+        .frame(width: 350, height: 370)
+        
     }
     
     
@@ -29,7 +43,7 @@ struct RecentCard: View {
         VideoPlayer(player: player)
             .scaledToFill()
             .onAppear {
-                player = AVPlayer(url: video.videoUrlPath!)
+                player = AVPlayer(url: video.videoUrlPath ?? testFootageUrl!)
                 player.play()
             }
             .onTapGesture {
@@ -44,9 +58,7 @@ struct RecentCard: View {
                 impactHeavy.impactOccurred()
             }
             .opacity(0.56)
-            .frame(maxWidth: .infinity, maxHeight: 400)
-            .background(.ultraThinMaterial)
-
+        .background(.ultraThinMaterial)
     }
     
     var textOverlay: some View {
@@ -60,24 +72,17 @@ struct RecentCard: View {
                 Text("\(video.viewCount) Views")
                     .font(.body)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-                    .padding(15)
-                    .offset(x: 10)
-                //Text(vManager.video.videoUrlPath?.absoluteString ?? "NIL")
             }
             .opacity(0.67)
         }
-        .frame(maxWidth: .infinity, maxHeight: 300, alignment: .topLeading)
-        .padding()
-        .offset(y: 10)
         .foregroundColor(.white)
-
     }
 }
 
 struct Recents_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            RecentCard(video: exampleVideos[1])
+            RecentCard(video: exampleVideos[2])
         }
     }
 }
