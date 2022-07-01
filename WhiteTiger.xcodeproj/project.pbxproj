@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89049943286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */; };
+		8904994F286EE3390031FF2E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8904994E286EE3390031FF2E /* Extensions.swift */; };
+		89049951286EE4A20031FF2E /* Lcl_VideoView_Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89049950286EE4A20031FF2E /* Lcl_VideoView_Home.swift */; };
 		891A4C5A285B019800538E38 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C59285B019800538E38 /* FirebaseAnalytics */; };
 		891A4C5C285B019800538E38 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C5B285B019800538E38 /* FirebaseAnalyticsSwift */; };
 		891A4C5E285B019800538E38 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 891A4C5D285B019800538E38 /* FirebaseAppCheck */; };
@@ -39,7 +42,7 @@
 		893124A62865C92100155E9B /* TestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A52865C92100155E9B /* TestCard.swift */; };
 		893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */; };
 		893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124AB2865ED8A00155E9B /* ZStackTestView.swift */; };
-		8932A978286C19C8008E437B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A977286C19C8008E437B /* HomeView.swift */; };
+		8932A978286C19C8008E437B /* Lcl_HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A977286C19C8008E437B /* Lcl_HomeView.swift */; };
 		8932A97A286C5AAE008E437B /* RecentLocalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A979286C5AAE008E437B /* RecentLocalCard.swift */; };
 		8932A97C286C5E9A008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A97B286C5E99008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 */; };
 		8932A97E286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A97D286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 */; };
@@ -74,6 +77,7 @@
 		89790C802854E7A5007853BA /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = 89790C7F2854E7A4007853BA /* shapes.riv */; };
 		89790C832854E908007853BA /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 89790C822854E908007853BA /* RiveRuntime */; };
 		89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C842855AED0007853BA /* ArtistProfileCard.swift */; };
+		89DFAB8A286F62EB00776758 /* Lcl_ArtistProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_HomeVideoPreviewCard.swift; sourceTree = "<group>"; };
+		8904994E286EE3390031FF2E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		89049950286EE4A20031FF2E /* Lcl_VideoView_Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_VideoView_Home.swift; sourceTree = "<group>"; };
 		891A4C7C285B080800538E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		891A4C80285B088B00538E38 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		893124992861A45400155E9B /* NFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFirestoreManager.swift; sourceTree = "<group>"; };
@@ -105,7 +112,7 @@
 		893124A52865C92100155E9B /* TestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCard.swift; sourceTree = "<group>"; };
 		893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHorizontalCardsView.swift; sourceTree = "<group>"; };
 		893124AB2865ED8A00155E9B /* ZStackTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackTestView.swift; sourceTree = "<group>"; };
-		8932A977286C19C8008E437B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8932A977286C19C8008E437B /* Lcl_HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_HomeView.swift; sourceTree = "<group>"; };
 		8932A979286C5AAE008E437B /* RecentLocalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentLocalCard.swift; sourceTree = "<group>"; };
 		8932A97B286C5E99008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thor Love and Thunder (Official Teaser 1).mp4"; sourceTree = "<group>"; };
 		8932A97D286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4"; sourceTree = "<group>"; };
@@ -138,6 +145,7 @@
 		89790C7C285471DA007853BA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		89790C7F2854E7A4007853BA /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
 		89790C842855AED0007853BA /* ArtistProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistProfileCard.swift; sourceTree = "<group>"; };
+		89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_ArtistProfileCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +277,10 @@
 				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
 				8932A980286C67B5008E437B /* Lcl_VideoView.swift */,
+				89049950286EE4A20031FF2E /* Lcl_VideoView_Home.swift */,
+				8932A977286C19C8008E437B /* Lcl_HomeView.swift */,
+				89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */,
+				89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */,
 				8932A982286C86CD008E437B /* TestVideoView.swift */,
 				893124992861A45400155E9B /* NFirestoreManager.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
@@ -278,7 +290,7 @@
 				8932A979286C5AAE008E437B /* RecentLocalCard.swift */,
 				893124A32863250C00155E9B /* VideoManager.swift */,
 				8932A992286C90B7008E437B /* VideoView.swift */,
-				8932A977286C19C8008E437B /* HomeView.swift */,
+				8904994E286EE3390031FF2E /* Extensions.swift */,
 				893124A72865C99C00155E9B /* LegacyFirebaseManagers */,
 				893124A82865C9E100155E9B /* TestViews */,
 				89790C5428546AF9007853BA /* Assets.xcassets */,
@@ -492,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8904994F286EE3390031FF2E /* Extensions.swift in Sources */,
 				893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */,
 				89790C7D285471DA007853BA /* TestView.swift in Sources */,
 				8932A97A286C5AAE008E437B /* RecentLocalCard.swift in Sources */,
@@ -506,13 +519,16 @@
 				8932A995286CA812008E437B /* TestView2.swift in Sources */,
 				893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */,
 				894076C8285870F20036A670 /* RecentCard.swift in Sources */,
+				89DFAB8A286F62EB00776758 /* Lcl_ArtistProfileCard.swift in Sources */,
 				893D45E7285B8509000EF7AA /* FirestoreManager.swift in Sources */,
 				89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */,
 				8931249C2862422E00155E9B /* VideoModel.swift in Sources */,
 				8932A993286C90B7008E437B /* VideoView.swift in Sources */,
-				8932A978286C19C8008E437B /* HomeView.swift in Sources */,
+				8932A978286C19C8008E437B /* Lcl_HomeView.swift in Sources */,
 				893124A62865C92100155E9B /* TestCard.swift in Sources */,
+				89049943286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift in Sources */,
 				893124A42863250C00155E9B /* VideoManager.swift in Sources */,
+				89049951286EE4A20031FF2E /* Lcl_VideoView_Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

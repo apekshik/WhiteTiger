@@ -1,14 +1,14 @@
 //
-//  VideoView.swift
+//  Lcl_VideoView_Home.swift
 //  WhiteTiger
 //
-//  Created by Apekshik Panigrahi on 6/29/22.
+//  Created by Apekshik Panigrahi on 7/1/22.
 //
 
 import SwiftUI
 import AVKit
 
-struct Lcl_VideoView: View {
+struct Lcl_VideoView_Home: View {
     @State private var player = AVPlayer()
     @State private var playToggle: Bool = false
     @State var video: VideoModel
@@ -70,19 +70,18 @@ struct Lcl_VideoView: View {
             VStack(alignment: .leading) {
                 Text(video.title2)
                     .font(.body)
-                Text("\(video.viewCount) Views")
+                // \(video.viewCount) Views
+                Text("")
                     .font(.body)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
             }
             .opacity(0.67)
         }
         .foregroundColor(.white)
-    }
+    }}
 
-}
-
-struct Lcl_VideoView_Previews: PreviewProvider {
+struct Lcl_VideoView_Home_Previews: PreviewProvider {
     static var previews: some View {
-        Lcl_VideoView(video: exampleRecentVideos2[1])
+        Lcl_VideoView_Home(video: exampleRecentVideos2[0])
     }
 }

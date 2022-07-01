@@ -18,6 +18,7 @@ struct VideoModel: Codable, Identifiable, Equatable {
     var storagePath: String?
     var videoUrlPath: URL?
     var localVideoPath: String?
+    var ownerName: String?
 }
 
 let exampleVideos = [
@@ -58,7 +59,8 @@ VideoModel(recentsAndHits: true,
            viewCount: 1743932000,
            storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
            videoUrlPath: nil,
-           localVideoPath: "Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped)"
+           localVideoPath: "Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped)",
+           ownerName: "Michael Bliss"
           ),
 VideoModel(recentsAndHits: true,
            title: "Procreate Speedpaint",
@@ -66,7 +68,8 @@ VideoModel(recentsAndHits: true,
            viewCount: 373932000,
            storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
            videoUrlPath: nil,
-           localVideoPath: "Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1)"
+           localVideoPath: "Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1)",
+           ownerName: "Poki.Han"
           ),
 VideoModel(recentsAndHits: true,
            title: "VFX Artists React to CGI",
@@ -74,7 +77,8 @@ VideoModel(recentsAndHits: true,
            viewCount: 13730301,
            storagePath: "videos/Joji - Glimpse of Us (Official Video).mp4",
            videoUrlPath: nil,
-           localVideoPath: "VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped)"
+           localVideoPath: "VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped)",
+           ownerName: "Corridor Digital"
           ),
 VideoModel(recentsAndHits: true,
            title: "Slow Dancing in the Dark",
@@ -82,7 +86,8 @@ VideoModel(recentsAndHits: true,
            viewCount: 373932000,
            storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
            videoUrlPath: nil,
-           localVideoPath: "Joji - Slow Dancing in the Dark (Official Video)"
+           localVideoPath: "Joji - Slow Dancing in the Dark (Official Video)",
+           ownerName: "Joji"
           ),
 VideoModel(recentsAndHits: true,
            title: "Never Draw Beans!",
@@ -90,7 +95,8 @@ VideoModel(recentsAndHits: true,
            viewCount: 13730301,
            storagePath: "videos/Joji - Glimpse of Us (Official Video).mp4",
            videoUrlPath: nil,
-           localVideoPath: "Ethan Becker - Draw Gesture (clipped)"
+           localVideoPath: "Ethan Becker - Draw Gesture (clipped)",
+           ownerName: "Ethan Becker"
           ),
 VideoModel(recentsAndHits: true,
            title: "Thor: Love and Thunder",
@@ -98,7 +104,8 @@ VideoModel(recentsAndHits: true,
            viewCount: 373932000,
            storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
            videoUrlPath: nil,
-           localVideoPath: "Thor Love and Thunder - Behind The Scenes (1)"
+           localVideoPath: "Thor Love and Thunder - Behind The Scenes (1)",
+           ownerName: "Taika Waititi"
           ),
 ]
 
@@ -109,7 +116,8 @@ let exampleUpcomingSoonVideos = [
                viewCount: 24330301,
                storagePath: "videos/Joji - Glimpse of Us (Official Video).mp4",
                videoUrlPath: nil,
-               localVideoPath: "Joji - Slow Dancing in the Dark (Live)"
+               localVideoPath: "Joji - Slow Dancing in the Dark (Live)",
+               ownerName: "Joji"
               ),
     VideoModel(recentsAndHits: true,
                title: "Attack on Titan Suite",
@@ -117,7 +125,8 @@ let exampleUpcomingSoonVideos = [
                viewCount: 373932000,
                storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
                videoUrlPath: nil,
-               localVideoPath: "Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped)"
+               localVideoPath: "Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped)",
+               ownerName: "Hiroyuki Sawano"
               ),
     VideoModel(recentsAndHits: true,
                title: "Thor: Love and Thunder",
@@ -125,7 +134,8 @@ let exampleUpcomingSoonVideos = [
                viewCount: 24330301,
                storagePath: "videos/Joji - Glimpse of Us (Official Video).mp4",
                videoUrlPath: nil,
-               localVideoPath: "Thor Love and Thunder (Official Teaser 1)"
+               localVideoPath: "Thor Love and Thunder (Official Teaser 1)",
+               ownerName: "Taika Waititi"
               ),
     VideoModel(recentsAndHits: true,
                title: "Blinding Lights - Live",
@@ -133,6 +143,7 @@ let exampleUpcomingSoonVideos = [
                viewCount: 373932000,
                storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
                videoUrlPath: nil,
-               localVideoPath: "The Weeknd - Blinding Lights  (Live at Coachella 2022)"
+               localVideoPath: "The Weeknd - Blinding Lights  (Live at Coachella 2022)",
+               ownerName: "The Weeknd"
               )
 ]

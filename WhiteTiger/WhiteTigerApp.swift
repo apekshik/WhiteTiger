@@ -18,7 +18,7 @@ struct WhiteTigerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads")
         }
         
     }
