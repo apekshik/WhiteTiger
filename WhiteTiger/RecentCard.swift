@@ -21,21 +21,20 @@ struct RecentCard: View {
     var body: some View {
         ZStack {
             GeometryReader { geo in
+                let localFrameHeight = geo.frame(in: .local).height
+                let localFrameWidth = geo.frame(in: .local).width
                 videoPlayer
-                    .mask(RoundedRectangle(cornerRadius: 20)
-                        .frame(maxHeight: geo.frame(in: .local).height - 75, alignment: .center))
+                    .mask(RoundedRectangle(cornerRadius: 15)
+                        .frame(maxHeight: localFrameHeight - 75, alignment: .center))
                     .overlay(alignment: .center, content: {
                         textOverlay
-                            .frame(maxHeight: geo.frame(in: .local).height - 75, alignment: .center)
-                            .padding([.top, .bottom], 47)
-                            .padding([.leading, .trailing], 12)
-                    })
+                            .frame(maxWidth: localFrameWidth - 20, maxHeight: localFrameHeight - 85, alignment: .center)
+                            })
                 
             }
         }
-        .padding()
-        .frame(width: 350, height: 370)
-        
+        //.padding()
+        .frame(width: 350, height: 300)
     }
     
     
@@ -43,7 +42,7 @@ struct RecentCard: View {
         VideoPlayer(player: player)
             .scaledToFill()
             .onAppear {
-                player = AVPlayer(url: video.videoUrlPath ?? testFootageUrl!)
+                player = AVPlayer(url: video.videoUrlPath!)
                 player.play()
             }
             .onTapGesture {

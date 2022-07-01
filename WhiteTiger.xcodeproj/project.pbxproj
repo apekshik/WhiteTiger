@@ -39,6 +39,21 @@
 		893124A62865C92100155E9B /* TestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A52865C92100155E9B /* TestCard.swift */; };
 		893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */; };
 		893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124AB2865ED8A00155E9B /* ZStackTestView.swift */; };
+		8932A978286C19C8008E437B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A977286C19C8008E437B /* HomeView.swift */; };
+		8932A97A286C5AAE008E437B /* RecentLocalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A979286C5AAE008E437B /* RecentLocalCard.swift */; };
+		8932A97C286C5E9A008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A97B286C5E99008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 */; };
+		8932A97E286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A97D286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 */; };
+		8932A981286C67B5008E437B /* Lcl_VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A980286C67B5008E437B /* Lcl_VideoView.swift */; };
+		8932A983286C86CD008E437B /* TestVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A982286C86CD008E437B /* TestVideoView.swift */; };
+		8932A98B286C8D7C008E437B /* Thor Love and Thunder - Behind The Scenes (1).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A984286C8D79008E437B /* Thor Love and Thunder - Behind The Scenes (1).mp4 */; };
+		8932A98C286C8D7C008E437B /* Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A985286C8D79008E437B /* Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped).mp4 */; };
+		8932A98D286C8D7C008E437B /* VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A986286C8D7A008E437B /* VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped).mp4 */; };
+		8932A98E286C8D7C008E437B /* Thor Love And Thunder – Interviews _ Chris Hemsworth, Taika Waititi, Tessa Thompson And More! (Clipped).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A987286C8D7A008E437B /* Thor Love And Thunder – Interviews _ Chris Hemsworth, Taika Waititi, Tessa Thompson And More! (Clipped).mp4 */; };
+		8932A98F286C8D7C008E437B /* Ethan Becker - Draw Gesture (clipped).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A988286C8D7A008E437B /* Ethan Becker - Draw Gesture (clipped).mp4 */; };
+		8932A990286C8D7C008E437B /* Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A989286C8D7B008E437B /* Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1).mp4 */; };
+		8932A991286C8D7C008E437B /* The Weeknd - Blinding Lights  (Live at Coachella 2022).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8932A98A286C8D7C008E437B /* The Weeknd - Blinding Lights  (Live at Coachella 2022).mp4 */; };
+		8932A993286C90B7008E437B /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A992286C90B7008E437B /* VideoView.swift */; };
+		8932A995286CA812008E437B /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8932A994286CA812008E437B /* TestView2.swift */; };
 		893D45E7285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
 		893D45E8285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
 		893D45E9285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
@@ -90,8 +105,23 @@
 		893124A52865C92100155E9B /* TestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCard.swift; sourceTree = "<group>"; };
 		893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHorizontalCardsView.swift; sourceTree = "<group>"; };
 		893124AB2865ED8A00155E9B /* ZStackTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackTestView.swift; sourceTree = "<group>"; };
+		8932A977286C19C8008E437B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8932A979286C5AAE008E437B /* RecentLocalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentLocalCard.swift; sourceTree = "<group>"; };
+		8932A97B286C5E99008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thor Love and Thunder (Official Teaser 1).mp4"; sourceTree = "<group>"; };
+		8932A97D286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4"; sourceTree = "<group>"; };
+		8932A980286C67B5008E437B /* Lcl_VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_VideoView.swift; sourceTree = "<group>"; };
+		8932A982286C86CD008E437B /* TestVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVideoView.swift; sourceTree = "<group>"; };
+		8932A984286C8D79008E437B /* Thor Love and Thunder - Behind The Scenes (1).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thor Love and Thunder - Behind The Scenes (1).mp4"; sourceTree = "<group>"; };
+		8932A985286C8D79008E437B /* Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped).mp4"; sourceTree = "<group>"; };
+		8932A986286C8D7A008E437B /* VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped).mp4"; sourceTree = "<group>"; };
+		8932A987286C8D7A008E437B /* Thor Love And Thunder – Interviews _ Chris Hemsworth, Taika Waititi, Tessa Thompson And More! (Clipped).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Thor Love And Thunder – Interviews _ Chris Hemsworth, Taika Waititi, Tessa Thompson And More! (Clipped).mp4"; sourceTree = "<group>"; };
+		8932A988286C8D7A008E437B /* Ethan Becker - Draw Gesture (clipped).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ethan Becker - Draw Gesture (clipped).mp4"; sourceTree = "<group>"; };
+		8932A989286C8D7B008E437B /* Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1).mp4"; sourceTree = "<group>"; };
+		8932A98A286C8D7C008E437B /* The Weeknd - Blinding Lights  (Live at Coachella 2022).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Weeknd - Blinding Lights  (Live at Coachella 2022).mp4"; sourceTree = "<group>"; };
+		8932A992286C90B7008E437B /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		8932A994286CA812008E437B /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		893D45E6285B8509000EF7AA /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
-		894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Joji - Glimpse of Us (Official Video).mp4"; path = "VideoAssets/Joji - Glimpse of Us (Official Video).mp4"; sourceTree = SOURCE_ROOT; };
+		894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Joji - Glimpse of Us (Official Video).mp4"; path = "VideoAssets/Joji/Joji - Glimpse of Us (Official Video).mp4"; sourceTree = SOURCE_ROOT; };
 		894076C7285870F20036A670 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
 		896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		89790C4D28546AF8007853BA /* WhiteTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,17 +208,35 @@
 				893124A52865C92100155E9B /* TestCard.swift */,
 				893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */,
 				893124AB2865ED8A00155E9B /* ZStackTestView.swift */,
+				8932A994286CA812008E437B /* TestView2.swift */,
 			);
 			path = TestViews;
 			sourceTree = "<group>";
 		};
-		894076C2285870230036A670 /* VideoAssets */ = {
+		8932A97F286C66CB008E437B /* Joji */ = {
 			isa = PBXGroup;
 			children = (
 				894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */,
 				8931249F2862456C00155E9B /* Joji - Can't Get Over You (Official Video).mp4 */,
 				8931249D286243A900155E9B /* Joji - Slow Dancing in the Dark (Live).mp4 */,
 				8931249E286243AA00155E9B /* Joji - Slow Dancing in the Dark (Official Video).mp4 */,
+			);
+			path = Joji;
+			sourceTree = "<group>";
+		};
+		894076C2285870230036A670 /* VideoAssets */ = {
+			isa = PBXGroup;
+			children = (
+				8932A988286C8D7A008E437B /* Ethan Becker - Draw Gesture (clipped).mp4 */,
+				8932A985286C8D79008E437B /* Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped).mp4 */,
+				8932A989286C8D7B008E437B /* Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1).mp4 */,
+				8932A98A286C8D7C008E437B /* The Weeknd - Blinding Lights  (Live at Coachella 2022).mp4 */,
+				8932A984286C8D79008E437B /* Thor Love and Thunder - Behind The Scenes (1).mp4 */,
+				8932A987286C8D7A008E437B /* Thor Love And Thunder – Interviews _ Chris Hemsworth, Taika Waititi, Tessa Thompson And More! (Clipped).mp4 */,
+				8932A986286C8D7A008E437B /* VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped).mp4 */,
+				8932A97D286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 */,
+				8932A97B286C5E99008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 */,
+				8932A97F286C66CB008E437B /* Joji */,
 			);
 			path = VideoAssets;
 			sourceTree = "<group>";
@@ -220,14 +268,19 @@
 			children = (
 				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
-				893124A72865C99C00155E9B /* LegacyFirebaseManagers */,
+				8932A980286C67B5008E437B /* Lcl_VideoView.swift */,
+				8932A982286C86CD008E437B /* TestVideoView.swift */,
 				893124992861A45400155E9B /* NFirestoreManager.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
 				89790C7A28546B80007853BA /* ArtistMainView.swift */,
 				89790C842855AED0007853BA /* ArtistProfileCard.swift */,
 				894076C7285870F20036A670 /* RecentCard.swift */,
-				893124A82865C9E100155E9B /* TestViews */,
+				8932A979286C5AAE008E437B /* RecentLocalCard.swift */,
 				893124A32863250C00155E9B /* VideoManager.swift */,
+				8932A992286C90B7008E437B /* VideoView.swift */,
+				8932A977286C19C8008E437B /* HomeView.swift */,
+				893124A72865C99C00155E9B /* LegacyFirebaseManagers */,
+				893124A82865C9E100155E9B /* TestViews */,
 				89790C5428546AF9007853BA /* Assets.xcassets */,
 				891A4C7B285B04D200538E38 /* Models */,
 				89790C5628546AF9007853BA /* Preview Content */,
@@ -396,14 +449,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8932A97E286C6122008E437B /* Michael Bliss - iPhone 12 Pro Video Test - California Travel Vlog (Clipped).mp4 in Resources */,
 				894076C4285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 in Resources */,
+				8932A991286C8D7C008E437B /* The Weeknd - Blinding Lights  (Live at Coachella 2022).mp4 in Resources */,
+				8932A98F286C8D7C008E437B /* Ethan Becker - Draw Gesture (clipped).mp4 in Resources */,
+				8932A98C286C8D7C008E437B /* Hiroyuki Sawano - Project【emU】 “Attack on Titan” suite (clipped).mp4 in Resources */,
 				893124A02862CBAF00155E9B /* Joji - Can't Get Over You (Official Video).mp4 in Resources */,
 				89790C5828546AF9007853BA /* Preview Assets.xcassets in Resources */,
+				8932A97C286C5E9A008E437B /* Thor Love and Thunder (Official Teaser 1).mp4 in Resources */,
+				8932A990286C8D7C008E437B /* Poki.Han - PROCREATE SPEEDPAINT ❥ POKI.HAN (1).mp4 in Resources */,
 				891A4C7D285B080800538E38 /* GoogleService-Info.plist in Resources */,
 				893124A22862CBB800155E9B /* Joji - Slow Dancing in the Dark (Official Video).mp4 in Resources */,
 				893124A12862CBB500155E9B /* Joji - Slow Dancing in the Dark (Live).mp4 in Resources */,
 				89790C802854E7A5007853BA /* shapes.riv in Resources */,
 				89790C5528546AF9007853BA /* Assets.xcassets in Resources */,
+				8932A98E286C8D7C008E437B /* Thor Love And Thunder – Interviews _ Chris Hemsworth, Taika Waititi, Tessa Thompson And More! (Clipped).mp4 in Resources */,
+				8932A98D286C8D7C008E437B /* VFX Artists React to TOLLYWOOD Bad and Great CGi (clipped).mp4 in Resources */,
+				8932A98B286C8D7C008E437B /* Thor Love and Thunder - Behind The Scenes (1).mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,17 +494,23 @@
 			files = (
 				893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */,
 				89790C7D285471DA007853BA /* TestView.swift in Sources */,
+				8932A97A286C5AAE008E437B /* RecentLocalCard.swift in Sources */,
 				891A4C81285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,
 				89790C5328546AF9007853BA /* ContentView.swift in Sources */,
+				8932A981286C67B5008E437B /* Lcl_VideoView.swift in Sources */,
 				896F60BE285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */,
 				89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */,
 				8931249A2861A45500155E9B /* NFirestoreManager.swift in Sources */,
+				8932A983286C86CD008E437B /* TestVideoView.swift in Sources */,
+				8932A995286CA812008E437B /* TestView2.swift in Sources */,
 				893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */,
 				894076C8285870F20036A670 /* RecentCard.swift in Sources */,
 				893D45E7285B8509000EF7AA /* FirestoreManager.swift in Sources */,
 				89790C5128546AF9007853BA /* WhiteTigerApp.swift in Sources */,
 				8931249C2862422E00155E9B /* VideoModel.swift in Sources */,
+				8932A993286C90B7008E437B /* VideoView.swift in Sources */,
+				8932A978286C19C8008E437B /* HomeView.swift in Sources */,
 				893124A62865C92100155E9B /* TestCard.swift in Sources */,
 				893124A42863250C00155E9B /* VideoManager.swift in Sources */,
 			);

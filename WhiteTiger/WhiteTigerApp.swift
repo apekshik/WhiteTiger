@@ -18,9 +18,9 @@ struct WhiteTigerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            ArtistMainView()
+            HomeView()
         }
+        
     }
         
 }
