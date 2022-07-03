@@ -63,7 +63,7 @@ let exampleUsers: [UserModel] = [
               last: "Digital",
               artistName: "Corridor Digital",
               occupation: "VFX Studio",
-              localProfileUrl: "Corridor Digital P1",
+              localProfileUrl: "Corridor Digital P2",
               followers: 897234900),
     UserModel(isArtist: true,
               first: "George",

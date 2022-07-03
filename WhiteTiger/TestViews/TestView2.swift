@@ -9,19 +9,29 @@ import SwiftUI
 import RiveRuntime
 
 struct TestView2: View {
+    @State var isZoomed: Bool = false
+    @Namespace var namespace
+    
+    var scale: Double {
+        isZoomed ? 1 : 0.3
+    }
+    
     var body: some View {
         ZStack {
             background
             
-            VStack(alignment: .center, spacing: 10) {
-                Text("TO ARTISTS, CREATORS, AND INNOVATORS OF THE WORLD")
-                    .font(.title.bold())
-                    .multilineTextAlignment(.center)
-                Text("Our Goal is simple: we are handing over power to where it rightfully belongs: You. I’m tired of seeing true talent being shunned, outcasted, and sidelined. Since no one’s really doing anything about it, I took matters into my own hands. And so lo and behold: Project WhiteTiger was born. So, stay tuned; exciting times are coming...")
-                    .font(.body)
-                    .opacity(0.8)
+            ZStack {
+                    Lcl_ArtistProfileCard(hideInfo: .constant(false), user: exampleUsers[2])
+                        .cornerRadius(20)
+                        .shadow(color: .black, radius: 20, x: 0, y: 0)
+                        .scaleEffect(scale)
             }
             .padding()
+        }
+        .onTapGesture {
+            withAnimation(.spring()) {
+                isZoomed.toggle()
+            }
         }
         
         

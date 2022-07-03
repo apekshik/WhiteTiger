@@ -49,7 +49,7 @@ struct Lcl_ArtistProfileCard: View {
 
 struct Lcl_ArtistProfileCard_Previews: PreviewProvider {
     static var previews: some View {
-        Lcl_ArtistProfileCard(hideInfo: .constant(false), user: exampleUsers[2])
+        Lcl_ArtistProfileCard(hideInfo: .constant(false), user: exampleUsers[4])
             .preferredColorScheme(.dark)
     }
 }

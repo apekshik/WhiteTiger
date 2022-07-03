@@ -12,11 +12,10 @@ struct Lcl_HomeVideoPreviewCard: View {
     @State var videos: [VideoModel]
     @State var cardTitle: String
     @State var hideProfileInfo: Bool = true
-    let users = exampleUsers
-    func logIn() {
-        
-    }
+    @State var profileZoom: Bool = false
     
+    let users = exampleUsers
+        
     var body: some View {
         ZStack {
             background
@@ -26,7 +25,7 @@ struct Lcl_HomeVideoPreviewCard: View {
 
                 videoTabView
                 
-                viewAllButton
+                //viewAllButton
             }
             .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
         }
@@ -58,9 +57,17 @@ struct Lcl_HomeVideoPreviewCard: View {
                         .position(x: lmidX + 10, y: lmidY)
                     if let user = UserModel.fetchUserProfile(for: video.ownerName!) {
                         Lcl_ArtistProfileCard(hideInfo: $hideProfileInfo, user: user)
-                            .frame(height: 300)
-                            .scaleEffect(0.2)
+                            .cornerRadius(40)
+                            .frame(height: 600)
+                            .scaleEffect(0.23 - (abs(195 - midX)/2200))
                             .position(x: lmidX - 110, y: lmidY + 100)
+                            .blur(radius: abs(minX) / 50)
+                            .shadow(color: Color(hex: "000000").opacity(0.9), radius: 10, x: 0, y: 0)
+                            .onTapGesture {
+                                withAnimation {
+                                    profileZoom.toggle()
+                                }
+                            }
                     } else {
                         Text("Failed to fetch user profile!!!")
                     }
