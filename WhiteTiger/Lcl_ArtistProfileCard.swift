@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct Lcl_ArtistProfileCard: View {
-    @Binding var hideInfo: Bool
+    @Binding var showInfo: Bool
     let user: UserModel
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-            if hideInfo == false {
+            if showInfo {
                 VStack(alignment: .leading) {
                     Text(user.artistName ?? "??")
                         .font(.title)
@@ -49,7 +49,7 @@ struct Lcl_ArtistProfileCard: View {
 
 struct Lcl_ArtistProfileCard_Previews: PreviewProvider {
     static var previews: some View {
-        Lcl_ArtistProfileCard(hideInfo: .constant(false), user: exampleUsers[4])
+        Lcl_ArtistProfileCard(showInfo: .constant(false), user: exampleUsers[4])
             .preferredColorScheme(.dark)
     }
 }

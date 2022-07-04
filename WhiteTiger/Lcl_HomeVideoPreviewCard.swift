@@ -11,23 +11,28 @@ import RiveRuntime
 struct Lcl_HomeVideoPreviewCard: View {
     @State var videos: [VideoModel]
     @State var cardTitle: String
-    @State var hideProfileInfo: Bool = true
-    @State var profileZoom: Bool = false
-    
+    @State var showProfileInfo: Bool = true
+    @State var showProfilePage: Bool = false
     let users = exampleUsers
         
     var body: some View {
         ZStack {
             background
             
-            ZStack {
-                glassBackTitle
+            if !showProfilePage {
+                ZStack {
+                    glassBackTitle
 
-                videoTabView
-                
-                //viewAllButton
+                    videoTabView
+                    
+                    //viewAllButton
+                }
+                .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
             }
-            .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
+            
+            if showProfilePage {
+                
+            }
         }
     }
     
@@ -56,7 +61,7 @@ struct Lcl_HomeVideoPreviewCard: View {
                         .rotation3DEffect(.degrees(6), axis: (x: 0, y: 1, z: 0))
                         .position(x: lmidX + 10, y: lmidY)
                     if let user = UserModel.fetchUserProfile(for: video.ownerName!) {
-                        Lcl_ArtistProfileCard(hideInfo: $hideProfileInfo, user: user)
+                        Lcl_ArtistProfileCard(showInfo: $showProfileInfo, user: user)
                             .cornerRadius(40)
                             .frame(height: 600)
                             .scaleEffect(0.23 - (abs(195 - midX)/2200))
@@ -65,7 +70,8 @@ struct Lcl_HomeVideoPreviewCard: View {
                             .shadow(color: Color(hex: "000000").opacity(0.9), radius: 10, x: 0, y: 0)
                             .onTapGesture {
                                 withAnimation {
-                                    profileZoom.toggle()
+                                    showProfilePage.toggle()
+                                    showProfileInfo.toggle()
                                 }
                             }
                     } else {

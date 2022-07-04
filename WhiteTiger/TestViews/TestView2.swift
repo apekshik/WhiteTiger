@@ -21,7 +21,7 @@ struct TestView2: View {
             background
             
             ZStack {
-                    Lcl_ArtistProfileCard(hideInfo: .constant(false), user: exampleUsers[2])
+                    Lcl_ArtistProfileCard(showInfo: .constant(false), user: exampleUsers[2])
                         .cornerRadius(20)
                         .shadow(color: .black, radius: 20, x: 0, y: 0)
                         .scaleEffect(scale)

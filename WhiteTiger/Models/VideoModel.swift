@@ -27,28 +27,32 @@ let exampleVideos = [
                title2: "Album relase - Single",
                viewCount: 13730301,
                storagePath: "videos/Joji - Glimpse of Us (Official Video).mp4",
-               videoUrlPath: nil
+               videoUrlPath: nil,
+               localVideoPath: "Joji - Glimpse of Us (Official Video)"
               ),
     VideoModel(recentsAndHits: true,
                title: "Slow Dancing in the Dark",
                title2: "Album – Ballads 1",
                viewCount: 373932000,
                storagePath: "videos/Joji - Slow Dancing in the Dark (Official Video).mp4",
-               videoUrlPath: nil
+               videoUrlPath: nil,
+               localVideoPath: "Joji - Slow Dancing in the Dark (Official Video)"
               ),
     VideoModel(recentsAndHits: true,
                title: "Can't Get Over You",
                title2: "Album – Ballads 1 (ft. Clams Casino)",
                viewCount: 373932000,
                storagePath: "videos/Joji - Can't Get Over You (Official Video).mp4",
-               videoUrlPath: nil
+               videoUrlPath: nil,
+               localVideoPath: "Joji - Can't Get Over You (Official Video)"
               ),
     VideoModel(recentsAndHits: false,
                title: "Head in the Clouds - 2019",
                title2: "Performing Slow Dancing in the Dark",
                viewCount: 123700000,
                storagePath: "videos/Joji - Slow Dancing in the Dark (Live).mp4",
-               videoUrlPath: nil
+               videoUrlPath: nil,
+               localVideoPath: "Joji - Slow Dancing in the Dark (Live)"
               )
 ]
 

@@ -4,6 +4,8 @@
 //
 //  Created by Apekshik Panigrahi on 6/29/22.
 //
+// Basic Template for a videoCard. shows title, subtitle and view count in a rounded
+// rectangle border. 
 
 import SwiftUI
 import AVKit

@@ -4,6 +4,8 @@
 //
 //  Created by Apekshik Panigrahi on 7/1/22.
 //
+// A version of Lcl_VideoView with no view count. Built as such for Home Page cards where
+// view count is a bit obstructive for other overlay elements. 
 
 import SwiftUI
 import AVKit
