@@ -11,7 +11,7 @@ import RiveRuntime
 struct Lcl_HomeVideoPreviewCard: View {
     @State var videos: [VideoModel]
     @State var cardTitle: String
-    @State var showProfileInfo: Bool = true
+    @State var showProfileInfo: Bool = false
     @State var showProfilePage: Bool = false
     let users = exampleUsers
         
@@ -62,7 +62,7 @@ struct Lcl_HomeVideoPreviewCard: View {
                         .position(x: lmidX + 10, y: lmidY)
                     if let user = UserModel.fetchUserProfile(for: video.ownerName!) {
                         Lcl_ArtistProfileCard(showInfo: $showProfileInfo, user: user)
-                            .cornerRadius(40)
+//                            .cornerRadius(40)
                             .frame(height: 600)
                             .scaleEffect(0.23 - (abs(195 - midX)/2200))
                             .position(x: lmidX - 110, y: lmidY + 100)

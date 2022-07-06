@@ -42,14 +42,16 @@ struct Lcl_ArtistProfileCard: View {
                 .scaledToFill()
                 .clipped()
                 .opacity(0.9))
-        .ignoresSafeArea()
+        .cornerRadius(30)
+        .frame(minHeight: 500)
+//        .ignoresSafeArea()
     }
 }
                 
 
 struct Lcl_ArtistProfileCard_Previews: PreviewProvider {
     static var previews: some View {
-        Lcl_ArtistProfileCard(showInfo: .constant(false), user: exampleUsers[4])
+        Lcl_ArtistProfileCard(showInfo: .constant(true), user: exampleUsers[4])
             .preferredColorScheme(.dark)
     }
 }

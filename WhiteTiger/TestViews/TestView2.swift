@@ -9,32 +9,82 @@ import SwiftUI
 import RiveRuntime
 
 struct TestView2: View {
-    @State var isZoomed: Bool = false
+    @State var isZoomed: Bool = true
+    @State var showText: Bool = true
     @Namespace var namespace
     
-    var scale: Double {
-        isZoomed ? 1 : 0.3
-    }
+    var user: UserModel = exampleUsers[1]
+    
     
     var body: some View {
-        ZStack {
-            background
-            
-            ZStack {
-                    Lcl_ArtistProfileCard(showInfo: .constant(false), user: exampleUsers[2])
-                        .cornerRadius(20)
-                        .shadow(color: .black, radius: 20, x: 0, y: 0)
-                        .scaleEffect(scale)
+        VStack {
+            let image = Image(user.localProfileUrl!)
+            if !isZoomed {
+                    image
+                        .resizable().aspectRatio(contentMode: .fit)
+                        .matchedGeometryEffect(id: "rec", in: namespace)
+                        .mask(RoundedRectangle(cornerRadius: 10)
+                            .matchedGeometryEffect(id: "rec", in: namespace))
+                        .frame(height: 150)
+                        .onTapGesture {
+                            withAnimation() {
+                                isZoomed.toggle()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    self.showText.toggle()
+                                }
+                            }
+                        }
             }
-            .padding()
-        }
-        .onTapGesture {
-            withAnimation(.spring()) {
-                isZoomed.toggle()
+            else {
+                    image
+                        .resizable().aspectRatio(contentMode: .fit)
+                        .matchedGeometryEffect(id: "rec", in: namespace)
+                        .mask(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .matchedGeometryEffect(id: "rec", in: namespace))
+                        .frame(height: 400)
+                        .onTapGesture {
+                            withAnimation() {
+                                isZoomed.toggle()
+                            }
+                            showText.toggle()
+                        }
             }
         }
+        .overlay {
+            if showText {
+                GeometryReader { geo in
+                    VStack(alignment: .leading) {
+                        Text(user.artistName!.uppercased())
+                            .font(.title)
+                            .bold()
+                            .transition(.move(edge: .trailing))
+                        Text(user.occupation)
+                        Text("\(user.followers) Followers")
+                    }
+                    .transition(.opacity)
+                    .background(Rectangle()
+                        .fill(.ultraThinMaterial)
+                        .blur(radius: 30)
+                    )
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                    .padding()
+                }
+            }
+        }
+    }
         
-        
+    var textOverlay: some View {
+        GeometryReader { geo in
+                VStack(alignment: .leading) {
+                    Text(user.artistName ?? "??")
+                        .font(.title)
+                        .bold()
+                        .textCase(.uppercase)
+                    Text(user.occupation)
+                    Text("\(user.followers) Followers")
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+        }
     }
     
     var background: some View {

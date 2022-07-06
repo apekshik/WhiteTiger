@@ -27,8 +27,7 @@ struct Lcl_ArtistMainView: View {
             
             VStack(spacing: 17) {
                 Lcl_ArtistProfileCard(showInfo: .constant(true), user: exampleUsers[5])
-                .mask(RoundedRectangle(cornerRadius: 20))
-                .frame(minHeight: 500)
+                    .frame(minHeight: 500)
             
                 VStack(spacing: 4) {
                     Text("ABOUT")
