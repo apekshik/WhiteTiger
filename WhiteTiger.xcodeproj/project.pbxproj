@@ -217,10 +217,10 @@
 			isa = PBXGroup;
 			children = (
 				89790C7C285471DA007853BA /* TestView.swift */,
+				8932A994286CA812008E437B /* TestView2.swift */,
 				893124A52865C92100155E9B /* TestCard.swift */,
 				893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */,
 				893124AB2865ED8A00155E9B /* ZStackTestView.swift */,
-				8932A994286CA812008E437B /* TestView2.swift */,
 			);
 			path = TestViews;
 			sourceTree = "<group>";

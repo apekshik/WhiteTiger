@@ -13,25 +13,17 @@ struct Lcl_ArtistProfileCard: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-            if showInfo {
-                VStack(alignment: .leading) {
-                    Text(user.artistName ?? "??")
-                        .font(.title)
-                        .bold()
-                        .textCase(.uppercase)
-                    Text(user.occupation)
-                    Text("\(user.followers) Followers")
-                }
-            } else {
-                VStack(alignment: .leading) {
-                    Text("")
-                        .font(.title)
-                        .bold()
-                        .textCase(.uppercase)
-                    Text("")
-                    Text("")
-                }
+            
+            VStack(alignment: .leading) {
+                Text(user.artistName ?? "??")
+                    .font(.title)
+                    .bold()
+                    .textCase(.uppercase)
+                Text(user.occupation)
+                Text("\(user.followers) Followers")
             }
+            .opacity(showInfo ? 1 : 0)
+
                 
             
         }

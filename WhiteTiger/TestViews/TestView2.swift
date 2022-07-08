@@ -9,11 +9,11 @@ import SwiftUI
 import RiveRuntime
 
 struct TestView2: View {
-    @State var isZoomed: Bool = true
-    @State var showText: Bool = true
+    @State var isZoomed: Bool = false
+    @State var showText: Bool = false
     @Namespace var namespace
     
-    var user: UserModel = exampleUsers[1]
+    var user: UserModel = exampleUsers[0]
     
     
     var body: some View {
@@ -26,51 +26,39 @@ struct TestView2: View {
                         .mask(RoundedRectangle(cornerRadius: 10)
                             .matchedGeometryEffect(id: "rec", in: namespace))
                         .frame(height: 150)
-                        .onTapGesture {
-                            withAnimation() {
-                                isZoomed.toggle()
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    self.showText.toggle()
-                                }
-                            }
-                        }
             }
-            else {
+            
+            if isZoomed {
                     image
                         .resizable().aspectRatio(contentMode: .fit)
                         .matchedGeometryEffect(id: "rec", in: namespace)
                         .mask(RoundedRectangle(cornerRadius: 20, style: .continuous)
                             .matchedGeometryEffect(id: "rec", in: namespace))
-                        .frame(height: 400)
-                        .onTapGesture {
-                            withAnimation() {
-                                isZoomed.toggle()
-                            }
-                            showText.toggle()
-                        }
+                        .frame(height: 500)
             }
         }
         .overlay {
-            if showText {
-                GeometryReader { geo in
-                    VStack(alignment: .leading) {
-                        Text(user.artistName!.uppercased())
-                            .font(.title)
-                            .bold()
-                            .transition(.move(edge: .trailing))
-                        Text(user.occupation)
-                        Text("\(user.followers) Followers")
-                    }
-                    .transition(.opacity)
-                    .background(Rectangle()
-                        .fill(.ultraThinMaterial)
-                        .blur(radius: 30)
-                    )
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                    .padding()
+            GeometryReader { geo in
+                VStack(alignment: .leading) {
+                    Text(user.artistName!.uppercased())
+                        .font(.title)
+                        .bold()
+                        .transition(.move(edge: .trailing))
+                    Text(user.occupation)
+                    Text("\(user.followers) Followers")
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                .opacity(showText ? 1 : 0)
+                .padding()
             }
         }
+        .onTapGesture {
+            withAnimation() {
+                isZoomed.toggle()
+                showText.toggle()
+            }
+        }
+
     }
         
     var textOverlay: some View {
