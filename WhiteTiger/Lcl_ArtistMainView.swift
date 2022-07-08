@@ -11,6 +11,13 @@ import SwiftUI
 import RiveRuntime
 
 struct Lcl_ArtistMainView: View {
+    // synced 
+    @Namespace var animations
+    @State var showProfileInfo: Bool = true
+    @State var ArtistPagePfpHeight: Double = 500
+//    @State var user: UserModel
+    @Binding var selectedUser: UserModel?
+    // local
     var videos = exampleVideos
     var body: some View {
         ZStack {
@@ -26,9 +33,17 @@ struct Lcl_ArtistMainView: View {
         VStack(spacing: 8) {
             
             VStack(spacing: 17) {
-                Lcl_ArtistProfileCard(showInfo: .constant(true), user: exampleUsers[5])
-                    .frame(minHeight: 500)
-            
+                Lcl_ArtistProfileCard(showText: $showProfileInfo,
+                                      namespace: animations,
+                                      pfpHeight: ArtistPagePfpHeight,
+                                      user: selectedUser!
+                )
+                .onTapGesture {
+                    withAnimation {
+                        selectedUser = nil
+                        showProfileInfo.toggle()
+                    }
+                }
                 VStack(spacing: 4) {
                     Text("ABOUT")
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -40,8 +55,6 @@ struct Lcl_ArtistMainView: View {
                 }
                 
             }
-            
-            
                 
             TabView {
                 ForEach(videos) { video in
@@ -94,7 +107,7 @@ struct Lcl_ArtistMainView: View {
 
 struct Lcl_ArtistMainView_Previews: PreviewProvider {
     static var previews: some View {
-        Lcl_ArtistMainView()
+        Lcl_ArtistMainView(selectedUser: .constant(exampleUsers[0]))
             .preferredColorScheme(.dark)
     }
 }

@@ -18,49 +18,109 @@ struct TestView2: View {
     
     var body: some View {
         VStack {
-            let image = Image(user.localProfileUrl!)
             if !isZoomed {
-                    image
-                        .resizable().aspectRatio(contentMode: .fit)
-                        .matchedGeometryEffect(id: "rec", in: namespace)
-                        .mask(RoundedRectangle(cornerRadius: 10)
-                            .matchedGeometryEffect(id: "rec", in: namespace))
-                        .frame(height: 150)
+                VStack {
+                    Image(user.localProfileUrl!)
+                            .resizable().aspectRatio(contentMode: .fit)
+                            .matchedGeometryEffect(id: "rec", in: namespace)
+                            .mask(RoundedRectangle(cornerRadius: 10)
+                                .matchedGeometryEffect(id: "rec", in: namespace))
+                        .frame(height: 100)
+                }
+                .overlay {
+                    GeometryReader { geo in
+                        VStack(alignment: .leading) {
+                            Text(user.artistName!.uppercased())
+                                .font(.title)
+                                .bold()
+                                .matchedGeometryEffect(id: "artistName", in: namespace)
+                            Text(user.occupation)
+                                .matchedGeometryEffect(id: "occupation", in: namespace)
+                            Text("\(user.followers) Followers")
+                                .matchedGeometryEffect(id: "followerCount", in: namespace)                        }
+                        .frame(maxWidth: .infinity, maxHeight: 100, alignment: .bottomLeading)
+                        .opacity(showText ? 1 : 0)
+                        .padding()
+                    }
+                }
+                .onTapGesture {
+                    withAnimation() {
+                        isZoomed.toggle()
+                        showText.toggle()
+                    }
+                }
             }
             
             if isZoomed {
-                    image
-                        .resizable().aspectRatio(contentMode: .fit)
-                        .matchedGeometryEffect(id: "rec", in: namespace)
-                        .mask(RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .matchedGeometryEffect(id: "rec", in: namespace))
-                        .frame(height: 500)
-            }
-        }
-        .overlay {
-            GeometryReader { geo in
-                VStack(alignment: .leading) {
-                    Text(user.artistName!.uppercased())
-                        .font(.title)
-                        .bold()
-                        .transition(.move(edge: .trailing))
-                    Text(user.occupation)
-                    Text("\(user.followers) Followers")
+                VStack {
+                    Image(user.localProfileUrl!)
+                            .resizable().aspectRatio(contentMode: .fit)
+                            .matchedGeometryEffect(id: "rec", in: namespace)
+                            .mask(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                .matchedGeometryEffect(id: "rec", in: namespace))
+                            .frame(height: 500)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                .opacity(showText ? 1 : 0)
-                .padding()
+                .overlay {
+                    GeometryReader { geo in
+                        VStack(alignment: .leading) {
+                            Text(user.artistName!.uppercased())
+                                .font(.title)
+                                .bold()
+                                .matchedGeometryEffect(id: "artistName", in: namespace)
+                            Text(user.occupation)
+                                .matchedGeometryEffect(id: "occupation", in: namespace)
+                            Text("\(user.followers) Followers")
+                                .matchedGeometryEffect(id: "followerCount", in: namespace)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: 500, alignment: .bottomLeading)
+                        .opacity(showText ? 1 : 0)
+                        .padding()
+                    }
+                }
+                .onTapGesture {
+                    withAnimation() {
+                        isZoomed.toggle()
+                        showText.toggle()
+                    }
+                }
+                .offset(y: -100)
             }
         }
-        .onTapGesture {
-            withAnimation() {
-                isZoomed.toggle()
-                showText.toggle()
-            }
-        }
+//        .onTapGesture {
+//            withAnimation() {
+//                isZoomed.toggle()
+//                showText.toggle()
+//            }
+//        }
 
     }
         
+    var nonZoom: some View {
+        VStack {
+            Image(user.localProfileUrl!)
+                    .resizable().aspectRatio(contentMode: .fit)
+                    .matchedGeometryEffect(id: "rec", in: namespace)
+                    .mask(RoundedRectangle(cornerRadius: 20)
+                        .matchedGeometryEffect(id: "rec", in: namespace))
+                    .frame(height: 150)
+//            VStack {
+//                Text("Non Zoom")
+//                Text("some more text")
+//            }
+        }
+    }
+    
+    var fullZoom: some View {
+        VStack {
+            Image(user.localProfileUrl!)
+                    .resizable().aspectRatio(contentMode: .fit)
+                    .matchedGeometryEffect(id: "rec", in: namespace)
+                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .matchedGeometryEffect(id: "rec", in: namespace))
+                    .frame(height: 500)
+        }
+    }
+    
     var textOverlay: some View {
         GeometryReader { geo in
                 VStack(alignment: .leading) {

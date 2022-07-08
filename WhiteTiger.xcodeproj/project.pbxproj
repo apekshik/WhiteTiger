@@ -79,6 +79,7 @@
 		89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89790C842855AED0007853BA /* ArtistProfileCard.swift */; };
 		89795E252872B7F4004BD9B2 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89795E242872B7F4004BD9B2 /* MatchedView.swift */; };
 		89795E272872BFA6004BD9B2 /* Lcl_ArtistMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89795E262872BFA6004BD9B2 /* Lcl_ArtistMainView.swift */; };
+		89795E2B287800A6004BD9B2 /* Lcl_TestHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89795E2A287800A6004BD9B2 /* Lcl_TestHomeView.swift */; };
 		89DFAB8A286F62EB00776758 /* Lcl_ArtistProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +150,7 @@
 		89790C842855AED0007853BA /* ArtistProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistProfileCard.swift; sourceTree = "<group>"; };
 		89795E242872B7F4004BD9B2 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 		89795E262872BFA6004BD9B2 /* Lcl_ArtistMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_ArtistMainView.swift; sourceTree = "<group>"; };
+		89795E2A287800A6004BD9B2 /* Lcl_TestHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_TestHomeView.swift; sourceTree = "<group>"; };
 		89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_ArtistProfileCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,6 +288,7 @@
 				89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */,
 				89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */,
 				89795E262872BFA6004BD9B2 /* Lcl_ArtistMainView.swift */,
+				89795E2A287800A6004BD9B2 /* Lcl_TestHomeView.swift */,
 				8932A982286C86CD008E437B /* TestVideoView.swift */,
 				893124992861A45400155E9B /* NFirestoreManager.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,
@@ -513,6 +516,7 @@
 				8904994F286EE3390031FF2E /* Extensions.swift in Sources */,
 				893124AA2865CA2100155E9B /* TestHorizontalCardsView.swift in Sources */,
 				89790C7D285471DA007853BA /* TestView.swift in Sources */,
+				89795E2B287800A6004BD9B2 /* Lcl_TestHomeView.swift in Sources */,
 				8932A97A286C5AAE008E437B /* RecentLocalCard.swift in Sources */,
 				891A4C81285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,

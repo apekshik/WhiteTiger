@@ -11,28 +11,24 @@ import RiveRuntime
 struct Lcl_HomeVideoPreviewCard: View {
     @State var videos: [VideoModel]
     @State var cardTitle: String
+    @Binding var selectedProfile: UserModel?
     @State var showProfileInfo: Bool = false
-    @State var showProfilePage: Bool = false
+    @State var homePfpHeight: Double = 100
+    @Namespace var animations
     let users = exampleUsers
         
     var body: some View {
         ZStack {
             background
             
-            if !showProfilePage {
-                ZStack {
-                    glassBackTitle
+            ZStack {
+                glassBackTitle
 
-                    videoTabView
-                    
-                    //viewAllButton
-                }
-                .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
-            }
-            
-            if showProfilePage {
+                videoTabView
                 
+                //viewAllButton
             }
+            .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
         }
     }
     
@@ -61,16 +57,17 @@ struct Lcl_HomeVideoPreviewCard: View {
                         .rotation3DEffect(.degrees(6), axis: (x: 0, y: 1, z: 0))
                         .position(x: lmidX + 10, y: lmidY)
                     if let user = UserModel.fetchUserProfile(for: video.ownerName!) {
-                        Lcl_ArtistProfileCard(showInfo: $showProfileInfo, user: user)
-//                            .cornerRadius(40)
-                            .frame(height: 600)
-                            .scaleEffect(0.23 - (abs(195 - midX)/2200))
+                        Lcl_ArtistProfileCard(showText: $showProfileInfo,
+                                              namespace: animations,
+                                              pfpHeight: homePfpHeight,
+                                              user: user)
+                            .scaleEffect(1.2 - (abs(195 - midX)/2200))
                             .position(x: lmidX - 110, y: lmidY + 100)
                             .blur(radius: abs(minX) / 50)
                             .shadow(color: Color(hex: "000000").opacity(0.9), radius: 10, x: 0, y: 0)
                             .onTapGesture {
                                 withAnimation {
-                                    showProfilePage.toggle()
+                                    selectedProfile = user
                                     showProfileInfo.toggle()
                                 }
                             }
@@ -120,7 +117,7 @@ struct Lcl_HomeVideoPreviewCard: View {
 
 struct Lcl_HomeVideoPreviewCard_Previews: PreviewProvider {
     static var previews: some View {
-        Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads")
+        Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads", selectedProfile: .constant(nil))
             .preferredColorScheme(.dark)
     }
 }
