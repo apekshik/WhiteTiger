@@ -9,13 +9,14 @@ import SwiftUI
 import RiveRuntime
 
 struct Lcl_HomeVideoPreviewCard: View {
-    @State var videos: [VideoModel]
-    @State var cardTitle: String
-    @Binding var selectedProfile: UserModel?
-    @State var showProfileInfo: Bool = false
-    @State var homePfpHeight: Double = 100
-    @Namespace var animations
-    let users = exampleUsers
+    // synced properties
+    @Binding var videos: [VideoModel]
+    @Binding var isZoomed: Bool
+    var namespace: Namespace.ID
+    @Binding var selectedUser: UserModel?
+    
+    // unsynced
+    let cardTitle: String
         
     var body: some View {
         ZStack {
@@ -44,43 +45,38 @@ struct Lcl_HomeVideoPreviewCard: View {
     }
     
     var videoTabView: some View {
-        TabView {
-            ForEach(videos) { video in
-                GeometryReader { geo in
-                    let midX = geo.frame(in: .global).midX
-                    let minX = geo.frame(in: .global).minX
-                    let lmidX = geo.frame(in: .local).midX
-                    let lmidY = geo.frame(in: .local).midY
-                    Lcl_VideoView_Home(video: video)
-                        .scaleEffect(1 - (abs(195 - midX)/1200))
-                        .blur(radius: abs(minX) / 70)
-                        .rotation3DEffect(.degrees(6), axis: (x: 0, y: 1, z: 0))
-                        .position(x: lmidX + 10, y: lmidY)
-                    if let user = UserModel.fetchUserProfile(for: video.ownerName!) {
-                        Lcl_ArtistProfileCard(showText: $showProfileInfo,
-                                              namespace: animations,
-                                              pfpHeight: homePfpHeight,
-                                              user: user)
-                            .scaleEffect(1.2 - (abs(195 - midX)/2200))
+        ZStack {
+            TabView {
+                ForEach(videos) { video in
+                    GeometryReader { geo in
+                        let midX = geo.frame(in: .global).midX
+                        let minX = geo.frame(in: .global).minX
+                        let lmidX = geo.frame(in: .local).midX
+                        let lmidY = geo.frame(in: .local).midY
+                        Lcl_VideoView_Home(video: video)
+                            .scaleEffect(1 - (abs(195 - midX)/1200))
+                            .blur(radius: abs(minX) / 70)
+                            .rotation3DEffect(.degrees(6), axis: (x: 0, y: 1, z: 0))
+                            .position(x: lmidX + 10, y: lmidY)
+                        if let eachUser = UserModel.fetchUserProfile(for: video.ownerName!) {
+                            Lcl_ArtistProfileCard(showText: $isZoomed,
+                                               namespace: namespace,
+                                               user: eachUser,
+                                               selectedUser: $selectedUser)
+                            .frame(height: 120)
+                            .scaleEffect(1 - (abs(195 - midX)/2200))
                             .position(x: lmidX - 110, y: lmidY + 100)
                             .blur(radius: abs(minX) / 50)
                             .shadow(color: Color(hex: "000000").opacity(0.9), radius: 10, x: 0, y: 0)
-                            .onTapGesture {
-                                withAnimation {
-                                    selectedProfile = user
-                                    showProfileInfo.toggle()
-                                }
-                            }
-                    } else {
-                        Text("Failed to fetch user profile!!!")
+                        } else {
+                            Text("Failed to fetch user for video card rack.")
+                        }
                     }
-                    
                 }
             }
-        }
-        .tabViewStyle(.page(indexDisplayMode: .never))
+            .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 400)
-
+        }
     }
     
     var viewAllButton: some View {
@@ -116,8 +112,14 @@ struct Lcl_HomeVideoPreviewCard: View {
 }
 
 struct Lcl_HomeVideoPreviewCard_Previews: PreviewProvider {
+    @Namespace static var np
     static var previews: some View {
-        Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads", selectedProfile: .constant(nil))
+        Lcl_HomeVideoPreviewCard(videos: .constant(exampleRecentVideos2),
+                                 isZoomed: .constant(true),
+                                 namespace: np,
+                                 selectedUser: .constant(nil),
+                                 cardTitle: "Recent Uploads"
+        )
             .preferredColorScheme(.dark)
     }
 }

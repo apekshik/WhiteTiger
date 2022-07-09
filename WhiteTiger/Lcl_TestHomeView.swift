@@ -12,9 +12,9 @@ struct Lcl_TestHomeView: View {
     var body: some View {
         VStack {
             if selectedProfile == nil {
-                Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads", selectedProfile: $selectedProfile)
+//                Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads", selectedProfile: $selectedProfile)
             } else {
-                Lcl_ArtistMainView(selectedUser: $selectedProfile)
+//                Lcl_ArtistMainView(selectedUser: $selectedProfile)
             }
             
         }

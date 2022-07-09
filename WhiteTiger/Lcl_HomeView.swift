@@ -25,7 +25,7 @@ struct Lcl_HomeView: View {
                     .opacity(0.8)
 
                 
-                Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads", selectedProfile: .constant(nil))
+//                Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads", selectedProfile: .constant(nil))
                 
                 ZStack {
                     Text("")
@@ -34,7 +34,7 @@ struct Lcl_HomeView: View {
                 .background(.thinMaterial)
             
                
-                Lcl_HomeVideoPreviewCard(videos: exampleUpcomingSoonVideos, cardTitle: "Coming Soon", selectedProfile: .constant(nil))
+//                Lcl_HomeVideoPreviewCard(videos: exampleUpcomingSoonVideos, cardTitle: "Coming Soon", selectedProfile: .constant(nil))
                 
                 ZStack {
                     Text("")
