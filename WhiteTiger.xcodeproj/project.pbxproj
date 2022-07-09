@@ -62,6 +62,7 @@
 		893D45E9285B8509000EF7AA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D45E6285B8509000EF7AA /* FirestoreManager.swift */; };
 		894076C4285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */; };
 		894076C8285870F20036A670 /* RecentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894076C7285870F20036A670 /* RecentCard.swift */; };
+		894A1DF128793CE000F80433 /* test_userImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A1DF028793CE000F80433 /* test_userImageView.swift */; };
 		896F60BE285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */; };
 		896F60BF285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */; };
 		896F60C0285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */; };
@@ -133,6 +134,7 @@
 		893D45E6285B8509000EF7AA /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		894076C3285870490036A670 /* Joji - Glimpse of Us (Official Video).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Joji - Glimpse of Us (Official Video).mp4"; path = "VideoAssets/Joji/Joji - Glimpse of Us (Official Video).mp4"; sourceTree = SOURCE_ROOT; };
 		894076C7285870F20036A670 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
+		894A1DF028793CE000F80433 /* test_userImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_userImageView.swift; sourceTree = "<group>"; };
 		896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		89790C4D28546AF8007853BA /* WhiteTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89790C5028546AF8007853BA /* WhiteTigerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTigerApp.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				89790C7C285471DA007853BA /* TestView.swift */,
 				8932A994286CA812008E437B /* TestView2.swift */,
+				894A1DF028793CE000F80433 /* test_userImageView.swift */,
 				893124A52865C92100155E9B /* TestCard.swift */,
 				893124A92865CA2100155E9B /* TestHorizontalCardsView.swift */,
 				893124AB2865ED8A00155E9B /* ZStackTestView.swift */,
@@ -522,6 +525,7 @@
 				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,
 				89790C5328546AF9007853BA /* ContentView.swift in Sources */,
 				8932A981286C67B5008E437B /* Lcl_VideoView.swift in Sources */,
+				894A1DF128793CE000F80433 /* test_userImageView.swift in Sources */,
 				896F60BE285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */,
 				89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */,
 				8931249A2861A45500155E9B /* NFirestoreManager.swift in Sources */,
