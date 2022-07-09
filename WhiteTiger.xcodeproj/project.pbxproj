@@ -261,6 +261,20 @@
 			path = VideoAssets;
 			sourceTree = "<group>";
 		};
+		894A1DF62879898C00F80433 /* Local Version */ = {
+			isa = PBXGroup;
+			children = (
+				89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */,
+				89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */,
+				89795E262872BFA6004BD9B2 /* Lcl_ArtistMainView.swift */,
+				8932A980286C67B5008E437B /* Lcl_VideoView.swift */,
+				89049950286EE4A20031FF2E /* Lcl_VideoView_Home.swift */,
+				8932A977286C19C8008E437B /* Lcl_HomeView.swift */,
+				89795E2A287800A6004BD9B2 /* Lcl_TestHomeView.swift */,
+			);
+			path = "Local Version";
+			sourceTree = "<group>";
+		};
 		89790C4428546AF8007853BA = {
 			isa = PBXGroup;
 			children = (
@@ -287,14 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
+				894A1DF62879898C00F80433 /* Local Version */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
-				8932A980286C67B5008E437B /* Lcl_VideoView.swift */,
-				89049950286EE4A20031FF2E /* Lcl_VideoView_Home.swift */,
-				8932A977286C19C8008E437B /* Lcl_HomeView.swift */,
-				89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */,
-				89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */,
-				89795E262872BFA6004BD9B2 /* Lcl_ArtistMainView.swift */,
-				89795E2A287800A6004BD9B2 /* Lcl_TestHomeView.swift */,
 				8932A982286C86CD008E437B /* TestVideoView.swift */,
 				893124992861A45400155E9B /* NFirestoreManager.swift */,
 				89790C5228546AF9007853BA /* ContentView.swift */,

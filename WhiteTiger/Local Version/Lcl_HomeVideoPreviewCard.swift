@@ -115,7 +115,7 @@ struct Lcl_HomeVideoPreviewCard_Previews: PreviewProvider {
     @Namespace static var np
     static var previews: some View {
         Lcl_HomeVideoPreviewCard(videos: .constant(exampleRecentVideos2),
-                                 isZoomed: .constant(true),
+                                 isZoomed: .constant(false),
                                  namespace: np,
                                  selectedUser: .constant(nil),
                                  cardTitle: "Recent Uploads"
