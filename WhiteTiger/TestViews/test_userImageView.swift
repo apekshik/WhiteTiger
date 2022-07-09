@@ -10,16 +10,15 @@ import SwiftUI
 struct test_userImageView: View {
     @Binding var showText: Bool
     var namespace: Namespace.ID
-    
     var user: UserModel
 
     var body: some View {
         VStack {
             Image(user.localProfileUrl!)
                     .resizable().aspectRatio(contentMode: .fit)
-                    .matchedGeometryEffect(id: "rec", in: namespace)
+                    .matchedGeometryEffect(id: user.id, in: namespace)
                     .mask(RoundedRectangle(cornerRadius: 10)
-                        .matchedGeometryEffect(id: "rec", in: namespace))
+                        .matchedGeometryEffect(id: user.id, in: namespace))
 
         }
         .overlay {
@@ -34,13 +33,13 @@ struct test_userImageView: View {
                     Text("\(user.followers) Followers")
                         .matchedGeometryEffect(id: "followerCount", in: namespace)
                 }
-                .frame(maxWidth: .infinity, maxHeight: 500, alignment: .bottomLeading)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
                 .opacity(showText ? 1 : 0)
                 .padding()
             }
         }
         .onTapGesture {
-            withAnimation() {
+            withAnimation(.spring()) {
                 showText.toggle()
             }
         }

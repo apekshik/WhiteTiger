@@ -9,137 +9,74 @@ import SwiftUI
 import RiveRuntime
 
 struct TestView2: View {
+    @State var videos: [VideoModel]
     @State var isZoomed: Bool = false
     @Namespace var namespace
     
-    var user: UserModel = exampleUsers[0]
+    @State var user: UserModel
+    @State var selectedUser: UserModel? = nil
     
     
     var body: some View {
         VStack {
             if !isZoomed {
-                test_userImageView(showText: $isZoomed, namespace: namespace, user: user)
-                    .frame(height: 100)
+                TabView {
+                    ForEach(videos) { video in
+                        GeometryReader { geo in
+                            let midX = geo.frame(in: .global).midX
+                            let minX = geo.frame(in: .global).minX
+                            let lmidX = geo.frame(in: .local).midX
+                            let lmidY = geo.frame(in: .local).midY
+                            Lcl_VideoView_Home(video: video)
+                                .scaleEffect(1 - (abs(195 - midX)/1200))
+                                .blur(radius: abs(minX) / 70)
+                                .rotation3DEffect(.degrees(6), axis: (x: 0, y: 1, z: 0))
+                                .position(x: lmidX + 10, y: lmidY)
+                            if let eachUser = UserModel.fetchUserProfile(for: video.ownerName!) {
+                            test_userImageView(showText: $isZoomed, namespace: namespace, user: eachUser)
+                                .frame(height: 100)
+                                .scaleEffect(1.2 - (abs(195 - midX)/2200))
+                                .position(x: lmidX - 110, y: lmidY + 100)
+                                .blur(radius: abs(minX) / 50)
+                                .shadow(color: Color(hex: "000000").opacity(0.9), radius: 10, x: 0, y: 0)
+                                .onTapGesture {
+                                    selectedUser = eachUser
+                                }
+                            } else {
+                                Text("Failed to fetch user for video card rack.")
+                            }
+                        }
+                    }
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .frame(height: 400)
             }
             
             if isZoomed {
-                test_userImageView(showText: $isZoomed, namespace: namespace, user: user)
-                    .frame(height: 500)
-            }
-        }
-    }
-    
-    var userImage: some View {
-        VStack {
-            Image(user.localProfileUrl!)
-                    .resizable().aspectRatio(contentMode: .fit)
-                    .matchedGeometryEffect(id: "rec", in: namespace)
-                    .mask(RoundedRectangle(cornerRadius: 10)
-                        .matchedGeometryEffect(id: "rec", in: namespace))
-
-        }
-        .overlay {
-            GeometryReader { geo in
-                VStack(alignment: .leading) {
-                    Text(user.artistName!.uppercased())
-                        .font(.title)
-                        .bold()
-                        .matchedGeometryEffect(id: "artistName", in: namespace)
-                    Text(user.occupation)
-                        .matchedGeometryEffect(id: "occupation", in: namespace)
-                    Text("\(user.followers) Followers")
-                        .matchedGeometryEffect(id: "followerCount", in: namespace)
+                ZStack {
+                    background
+                    
+                    VStack(spacing: 17) {
+                        if selectedUser != nil {
+                            test_userImageView(showText: $isZoomed, namespace: namespace, user: selectedUser!)
+                                .frame(maxHeight: .infinity)
+                            VStack(spacing: 4) {
+                                Text("ABOUT")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .font(.title3.bold())
+                                Text("George Kusunoki Miller better known by his stage name Joji and formerly by his online aliases Filthy Frank and Pink Guy, is a Japanese artist, singer, writer, and performer.")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .font(.body)
+                                    .opacity(0.7)
+                            }
+                            .padding()
+                            Spacer()
+                        } else {
+                            Text("User not selected on tap of profile!")
+                        }
+                    }
                 }
-                .frame(maxWidth: .infinity, maxHeight: 500, alignment: .bottomLeading)
-                .opacity(isZoomed ? 1 : 0)
-                .padding()
             }
-        }
-        .onTapGesture {
-            withAnimation() {
-                isZoomed.toggle()
-            }
-        }
-    }
-    
-    var nonZoom: some View {
-        VStack {
-            Image(user.localProfileUrl!)
-                    .resizable().aspectRatio(contentMode: .fit)
-                    .matchedGeometryEffect(id: "rec", in: namespace)
-                    .mask(RoundedRectangle(cornerRadius: 10)
-                        .matchedGeometryEffect(id: "rec", in: namespace))
-
-        }
-        .overlay {
-            GeometryReader { geo in
-                VStack(alignment: .leading) {
-                    Text(user.artistName!.uppercased())
-                        .font(.title)
-                        .bold()
-                        .matchedGeometryEffect(id: "artistName", in: namespace)
-                    Text(user.occupation)
-                        .matchedGeometryEffect(id: "occupation", in: namespace)
-                    Text("\(user.followers) Followers")
-                        .matchedGeometryEffect(id: "followerCount", in: namespace)
-                }
-                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .bottomLeading)
-                .opacity(isZoomed ? 1 : 0)
-                .padding()
-            }
-        }
-        .onTapGesture {
-            withAnimation() {
-                isZoomed.toggle()
-            }
-        }
-        
-    }
-    
-    var fullZoom: some View {
-        VStack {
-            Image(user.localProfileUrl!)
-                    .resizable().aspectRatio(contentMode: .fit)
-                    .matchedGeometryEffect(id: "rec", in: namespace)
-                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .matchedGeometryEffect(id: "rec", in: namespace))
-        }
-        .overlay {
-            GeometryReader { geo in
-                VStack(alignment: .leading) {
-                    Text(user.artistName!.uppercased())
-                        .font(.title)
-                        .bold()
-                        .matchedGeometryEffect(id: "artistName", in: namespace)
-                    Text(user.occupation)
-                        .matchedGeometryEffect(id: "occupation", in: namespace)
-                    Text("\(user.followers) Followers")
-                        .matchedGeometryEffect(id: "followerCount", in: namespace)
-                }
-                .frame(maxWidth: .infinity, maxHeight: 500, alignment: .bottomLeading)
-                .opacity(isZoomed ? 1 : 0)
-                .padding()
-            }
-        }
-        .onTapGesture {
-            withAnimation() {
-                isZoomed.toggle()
-            }
-        }
-        .offset(y: -100)
-    }
-    
-    var textOverlay: some View {
-        GeometryReader { geo in
-                VStack(alignment: .leading) {
-                    Text(user.artistName ?? "??")
-                        .font(.title)
-                        .bold()
-                        .textCase(.uppercase)
-                    Text(user.occupation)
-                    Text("\(user.followers) Followers")
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
         }
     }
     
@@ -158,7 +95,7 @@ struct TestView2: View {
 
 struct TestView2_Previews: PreviewProvider {
     static var previews: some View {
-        TestView2()
+        TestView2(videos: exampleRecentVideos2, user: exampleUsers[5])
             .preferredColorScheme(.dark)
     }
 }

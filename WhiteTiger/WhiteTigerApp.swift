@@ -20,7 +20,7 @@ struct WhiteTigerApp: App {
         WindowGroup {
 //            Lcl_HomeVideoPreviewCard(videos: exampleRecentVideos2, cardTitle: "Recent Uploads")
 //            Text("Hello World")
-            TestView2(isZoomed: false)
+            TestView2(videos: exampleRecentVideos2, user: exampleUsers[5])
         }
         
     }
