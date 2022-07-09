@@ -33,15 +33,15 @@ struct TestView2: View {
                                 .rotation3DEffect(.degrees(6), axis: (x: 0, y: 1, z: 0))
                                 .position(x: lmidX + 10, y: lmidY)
                             if let eachUser = UserModel.fetchUserProfile(for: video.ownerName!) {
-                            test_userImageView(showText: $isZoomed, namespace: namespace, user: eachUser)
+                                test_userImageView(showText: $isZoomed,
+                                                   namespace: namespace,
+                                                   user: eachUser,
+                                                   selectedUser: $selectedUser)
                                 .frame(height: 100)
                                 .scaleEffect(1.2 - (abs(195 - midX)/2200))
                                 .position(x: lmidX - 110, y: lmidY + 100)
                                 .blur(radius: abs(minX) / 50)
                                 .shadow(color: Color(hex: "000000").opacity(0.9), radius: 10, x: 0, y: 0)
-                                .onTapGesture {
-                                    selectedUser = eachUser
-                                }
                             } else {
                                 Text("Failed to fetch user for video card rack.")
                             }
@@ -58,7 +58,7 @@ struct TestView2: View {
                     
                     VStack(spacing: 17) {
                         if selectedUser != nil {
-                            test_userImageView(showText: $isZoomed, namespace: namespace, user: selectedUser!)
+                            test_userImageView(showText: $isZoomed, namespace: namespace, user: selectedUser!, selectedUser: $selectedUser)
                                 .frame(maxHeight: .infinity)
                             VStack(spacing: 4) {
                                 Text("ABOUT")

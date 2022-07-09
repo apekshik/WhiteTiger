@@ -11,7 +11,8 @@ struct test_userImageView: View {
     @Binding var showText: Bool
     var namespace: Namespace.ID
     var user: UserModel
-
+    @Binding var selectedUser: UserModel?
+    
     var body: some View {
         VStack {
             Image(user.localProfileUrl!)
@@ -39,8 +40,9 @@ struct test_userImageView: View {
             }
         }
         .onTapGesture {
+            selectedUser = user 
             withAnimation(.spring()) {
-                showText.toggle()
+                showText.toggle() 
             }
         }
     }
@@ -49,6 +51,6 @@ struct test_userImageView: View {
 struct test_userImageView_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        test_userImageView(showText: .constant(true), namespace: namespace, user: exampleUsers[0])
+        test_userImageView(showText: .constant(true), namespace: namespace, user: exampleUsers[0], selectedUser: .constant(nil))
     }
 }
