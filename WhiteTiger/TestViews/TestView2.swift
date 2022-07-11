@@ -9,27 +9,49 @@ import SwiftUI
 import RiveRuntime
 
 struct TestView2: View {
-    @State var videos: [VideoModel]
+    @State var recentsAndHits: [VideoModel]
+    @State var comingSoonVideos: [VideoModel]
     @State var isZoomed: Bool = false
     @Namespace var namespace
     @State var user: UserModel
     @State var selectedUser: UserModel? = nil
     
     let recentCardTitle: String = "Recent Uploads"
+    let comingSoonTitle: String = "Coming Soon"
     
     var body: some View {
-        VStack {
-            if !isZoomed {
-               Lcl_HomeVideoPreviewCard(videos: $videos, isZoomed: $isZoomed, namespace: namespace, selectedUser: $selectedUser, cardTitle: recentCardTitle)
-            }
-            
-            if isZoomed {
-                Lcl_ArtistMainView(videos: $videos,
-                                   isZoomed: $isZoomed,
-                                   namespace: namespace,
-                                   user: $user,
-                                   selectedUser: $selectedUser)
-            }
+        ScrollView {
+                if !isZoomed {
+                    VStack {
+                        Text("HOME")
+                            .font(.title.bold())
+                            .opacity(0.8)
+
+                        Lcl_HomeVideoPreviewCard(videos: $recentsAndHits, isZoomed: $isZoomed, namespace: namespace, selectedUser: $selectedUser, cardTitle: recentCardTitle)
+                        
+                        ZStack {
+                            Text("")
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 200, alignment: .leading)
+                        .background(.thinMaterial)
+                        
+                        Lcl_HomeVideoPreviewCard(videos: $comingSoonVideos, isZoomed: $isZoomed, namespace: namespace, selectedUser: $selectedUser, cardTitle: comingSoonTitle)
+                        
+                        ZStack {
+                            Text("")
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 300, alignment: .leading)
+                        .background(.thinMaterial)
+                    }
+                }
+                
+                if isZoomed {
+                    Lcl_ArtistMainView(videos: $recentsAndHits,
+                                       isZoomed: $isZoomed,
+                                       namespace: namespace,
+                                       user: $user,
+                                       selectedUser: $selectedUser)
+                }
         }
     }
     
@@ -48,7 +70,7 @@ struct TestView2: View {
 
 struct TestView2_Previews: PreviewProvider {
     static var previews: some View {
-        TestView2(videos: exampleRecentVideos2, user: exampleUsers[5])
+        TestView2(recentsAndHits: exampleRecentVideos2, comingSoonVideos: exampleUpcomingSoonVideos, user: exampleUsers[5])
             .preferredColorScheme(.dark)
     }
 }

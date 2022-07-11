@@ -210,6 +210,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		89305086287BDA9C006B2098 /* Live Version */ = {
+			isa = PBXGroup;
+			children = (
+				893124992861A45400155E9B /* NFirestoreManager.swift */,
+				89790C5228546AF9007853BA /* ContentView.swift */,
+				89790C7A28546B80007853BA /* ArtistMainView.swift */,
+				89790C842855AED0007853BA /* ArtistProfileCard.swift */,
+				89795E242872B7F4004BD9B2 /* MatchedView.swift */,
+				894076C7285870F20036A670 /* RecentCard.swift */,
+				893124A32863250C00155E9B /* VideoManager.swift */,
+				8932A992286C90B7008E437B /* VideoView.swift */,
+				8932A979286C5AAE008E437B /* RecentLocalCard.swift */,
+			);
+			path = "Live Version";
+			sourceTree = "<group>";
+		};
 		893124A72865C99C00155E9B /* LegacyFirebaseManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +238,7 @@
 		893124A82865C9E100155E9B /* TestViews */ = {
 			isa = PBXGroup;
 			children = (
+				8932A982286C86CD008E437B /* TestVideoView.swift */,
 				89790C7C285471DA007853BA /* TestView.swift */,
 				8932A994286CA812008E437B /* TestView2.swift */,
 				894A1DF028793CE000F80433 /* test_userImageView.swift */,
@@ -301,18 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				891A4C7C285B080800538E38 /* GoogleService-Info.plist */,
+				89305086287BDA9C006B2098 /* Live Version */,
 				894A1DF62879898C00F80433 /* Local Version */,
 				89790C5028546AF8007853BA /* WhiteTigerApp.swift */,
-				8932A982286C86CD008E437B /* TestVideoView.swift */,
-				893124992861A45400155E9B /* NFirestoreManager.swift */,
-				89790C5228546AF9007853BA /* ContentView.swift */,
-				89790C7A28546B80007853BA /* ArtistMainView.swift */,
-				89790C842855AED0007853BA /* ArtistProfileCard.swift */,
-				89795E242872B7F4004BD9B2 /* MatchedView.swift */,
-				894076C7285870F20036A670 /* RecentCard.swift */,
-				8932A979286C5AAE008E437B /* RecentLocalCard.swift */,
-				893124A32863250C00155E9B /* VideoManager.swift */,
-				8932A992286C90B7008E437B /* VideoView.swift */,
 				8904994E286EE3390031FF2E /* Extensions.swift */,
 				893124A72865C99C00155E9B /* LegacyFirebaseManagers */,
 				893124A82865C9E100155E9B /* TestViews */,
