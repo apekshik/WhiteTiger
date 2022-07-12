@@ -20,17 +20,13 @@ struct Lcl_HomeVideoPreviewCard: View {
         
     var body: some View {
         ZStack {
-            background
-            
-            ZStack {
-                glassBackTitle
+            glassBackTitle
 
-                videoTabView
-                
-                //viewAllButton
-            }
-            .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
+            videoTabView
+            
+            viewAllButton
         }
+        .frame(maxWidth: .infinity, idealHeight: 330, maxHeight: 340)
     }
     
     var glassBackTitle: some View {

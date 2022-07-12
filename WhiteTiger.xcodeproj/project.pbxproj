@@ -33,6 +33,7 @@
 		891A4C81285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
 		891A4C82285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
 		891A4C83285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
+		89305089287C6B3A006B2098 /* Lcl_CreatorDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89305088287C6B3A006B2098 /* Lcl_CreatorDashboard.swift */; };
 		8931249A2861A45500155E9B /* NFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124992861A45400155E9B /* NFirestoreManager.swift */; };
 		8931249C2862422E00155E9B /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931249B2862422E00155E9B /* VideoModel.swift */; };
 		893124A02862CBAF00155E9B /* Joji - Can't Get Over You (Official Video).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8931249F2862456C00155E9B /* Joji - Can't Get Over You (Official Video).mp4 */; };
@@ -108,6 +109,7 @@
 		89049950286EE4A20031FF2E /* Lcl_VideoView_Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_VideoView_Home.swift; sourceTree = "<group>"; };
 		891A4C7C285B080800538E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		891A4C80285B088B00538E38 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		89305088287C6B3A006B2098 /* Lcl_CreatorDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_CreatorDashboard.swift; sourceTree = "<group>"; };
 		893124992861A45400155E9B /* NFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFirestoreManager.swift; sourceTree = "<group>"; };
 		8931249B2862422E00155E9B /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		8931249D286243A900155E9B /* Joji - Slow Dancing in the Dark (Live).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Joji - Slow Dancing in the Dark (Live).mp4"; sourceTree = "<group>"; };
@@ -226,6 +228,14 @@
 			path = "Live Version";
 			sourceTree = "<group>";
 		};
+		89305087287C6A61006B2098 /* Artist's Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				89305088287C6B3A006B2098 /* Lcl_CreatorDashboard.swift */,
+			);
+			path = "Artist's Dashboard";
+			sourceTree = "<group>";
+		};
 		893124A72865C99C00155E9B /* LegacyFirebaseManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +291,7 @@
 		894A1DF62879898C00F80433 /* Local Version */ = {
 			isa = PBXGroup;
 			children = (
+				89305087287C6A61006B2098 /* Artist's Dashboard */,
 				89049942286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift */,
 				89DFAB89286F62EB00776758 /* Lcl_ArtistProfileCard.swift */,
 				89795E262872BFA6004BD9B2 /* Lcl_ArtistMainView.swift */,
@@ -565,6 +576,7 @@
 				89049943286ECD230031FF2E /* Lcl_HomeVideoPreviewCard.swift in Sources */,
 				893124A42863250C00155E9B /* VideoManager.swift in Sources */,
 				89049951286EE4A20031FF2E /* Lcl_VideoView_Home.swift in Sources */,
+				89305089287C6B3A006B2098 /* Lcl_CreatorDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

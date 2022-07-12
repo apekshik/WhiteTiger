@@ -55,6 +55,7 @@ struct Lcl_HomeView: View {
                                        selectedUser: $selectedUser)
                 }
         }
+        .background(background)
     }
     
     var background: some View {
