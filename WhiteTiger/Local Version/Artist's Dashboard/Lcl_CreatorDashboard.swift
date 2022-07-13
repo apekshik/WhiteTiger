@@ -15,12 +15,12 @@ import RiveRuntime
 
 struct Lcl_CreatorDashboard: View {
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
                 VStack(spacing: 3) {
                     Text("Welcome".uppercased())
                         .font(.title3).bold()
-                    Text("Home".uppercased())
+                    Text("Creator Dashboard".uppercased())
                         .font(.title).bold()
                     Text("You're provided here with a brief overview of everything an artist needs to know about their business. A bird's eye view if you will.").opacity(0.85)
                         .font(.body)
@@ -29,211 +29,19 @@ struct Lcl_CreatorDashboard: View {
                 Text("Analytics Overview Rack".uppercased())
                     .bold()
                
-                AnalyticsOverviewCard()
+                Lcl_AnalyticsOverviewCard()
                 
                 Spacer()
                 
                 Text("Collaborator Hub Overview".uppercased())
                     .bold()
                 
-                VStack(spacing: 16) {
-                    VStack(spacing: 4) {
-                        Text("Group Chats".uppercased())
-                            .font(.title2)
-                            .bold()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    VStack(spacing: 10) {
-                        Text("You x NIKI x Rich Brian")
-                            .font(.subheadline)
-                            .opacity(0.8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        VStack {
-                            Text("NIKI: They signed off the written pi...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("Rich Brian: Yeah, looked at that shi...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                        
-                        Divider()
-                        
-                        Text("88 Rising")
-                            .font(.subheadline)
-                            .opacity(0.8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        VStack {
-                            Text("JOJI: Imma smack that tupac off y...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("High Bros: Nah fam")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("JOJI: Man get yo yee yee ass hairc...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-
-                        }
-
-                        
-                        Divider()
-                        
-                        Text("88 Rising")
-                            .font(.subheadline)
-                            .opacity(0.8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        VStack {
-                            Text("JOJI: Imma smack that tupac off y...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("High Bros: Nah fam")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("JOJI: Man get yo yee yee ass hairc...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-
-                        }
-
-                        Text("View Likes, Comments, and QAs")
-                            .bold()
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity, minHeight: 60, maxHeight: 60)
-                            .background(Color(hex: "#fbf7f5"))
-                            .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 3)
-                            .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 30)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                    .stroke(.linearGradient(colors: [.white.opacity(0.8), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                            )
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        //                    .background(.angularGradient(colors: [Color(hex: "#860ea1"), Color(hex: "#3a27c4").opacity(0.7)], center: .center, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 368)))
-        //                    .background(.linearGradient(colors: [Color(hex: "#860ea1"), Color(hex: "#3a27c4").opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .background(.linearGradient(colors: [Color(hex: "#0c0a24").opacity(0.8), Color(hex: "#096b4c").opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .cornerRadius(20)
-        //                    .shadow(color: Color(hex: "#de126a").opacity(0.5), radius: 10, x: 0, y: 8)
-        //                    .shadow(color: Color(hex: "#3a27c4").opacity(0.5), radius: 5, x: 0, y: 3)
-                    .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 8)
-                    .shadow(color: .black.opacity(0.5), radius: 5, x: 0, y: 3)
-
-                    VStack(spacing: 4) {
-                        Text("Private Messages".uppercased())
-                            .font(.title2)
-                            .bold()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    VStack(spacing: 10) {
-                        Text("Rich Brian")
-                            .font(.subheadline)
-                            .opacity(0.8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        VStack {
-                            Text("They signed off the written papers and...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("Yeah, looked at that shit and fou...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                        
-                        Divider()
-                        
-                        Text("88 Rising")
-                            .font(.subheadline)
-                            .opacity(0.8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        VStack {
-                            Text("JOJI: Imma smack that tupac off y...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("High Bros: Nah fam")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("JOJI: Man get yo yee yee ass hairc...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-
-                        }
-
-                        
-                        Divider()
-                        
-                        Text("88 Rising")
-                            .font(.subheadline)
-                            .opacity(0.8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        VStack {
-                            Text("JOJI: Imma smack that tupac off y...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("High Bros: Nah fam")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            Text("JOJI: Man get yo yee yee ass hairc...")
-                                .font(.body)
-                                .bold()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-
-                        }
-
-                        Text("View Likes, Comments, and QAs")
-                            .bold()
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity, minHeight: 60, maxHeight: 60)
-                            .background(Color(hex: "#fbf7f5"))
-                            .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 3)
-                            .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 30)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                    .stroke(.linearGradient(colors: [.white.opacity(0.8), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                            )
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        //                    .background(.angularGradient(colors: [Color(hex: "#860ea1"), Color(hex: "#3a27c4").opacity(0.7)], center: .center, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 368)))
-        //                    .background(.linearGradient(colors: [Color(hex: "#860ea1"), Color(hex: "#3a27c4").opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .background(.linearGradient(colors: [Color(hex: "#0c0a24").opacity(0.8), Color(hex: "#630630").opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .cornerRadius(20)
-        //                    .shadow(color: Color(hex: "#de126a").opacity(0.5), radius: 10, x: 0, y: 8)
-        //                    .shadow(color: Color(hex: "#3a27c4").opacity(0.5), radius: 5, x: 0, y: 3)
-                    .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 8)
-                    .shadow(color: .black.opacity(0.5), radius: 5, x: 0, y: 3)
-                    
-                }
-                .padding()
-                .frame(maxWidth: .infinity, minHeight: 400, maxHeight: .infinity, alignment: .top)
-                .background(.ultraThinMaterial)
-                .cornerRadius(20)
-                .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 3)
-                .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 30)
+                Lcl_CollabHubOverviewCard()
                 
-
+                Text("Fan Space Overview".uppercased())
+                    .bold()
+                
+                Lcl_FanSpaceOverviewCard()
             }
                 
         }
@@ -241,7 +49,6 @@ struct Lcl_CreatorDashboard: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(background)
         .ignoresSafeArea()
-
     }
     
     var background: some View {

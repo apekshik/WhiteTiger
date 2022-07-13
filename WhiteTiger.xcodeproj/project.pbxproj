@@ -34,7 +34,7 @@
 		891A4C82285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
 		891A4C83285B088B00538E38 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891A4C80285B088B00538E38 /* UserModel.swift */; };
 		89305089287C6B3A006B2098 /* Lcl_CreatorDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89305088287C6B3A006B2098 /* Lcl_CreatorDashboard.swift */; };
-		8930508B287D5691006B2098 /* AnalyticsOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8930508A287D5691006B2098 /* AnalyticsOverviewCard.swift */; };
+		8930508B287D5691006B2098 /* Lcl_AnalyticsOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8930508A287D5691006B2098 /* Lcl_AnalyticsOverviewCard.swift */; };
 		8931249A2861A45500155E9B /* NFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893124992861A45400155E9B /* NFirestoreManager.swift */; };
 		8931249C2862422E00155E9B /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931249B2862422E00155E9B /* VideoModel.swift */; };
 		893124A02862CBAF00155E9B /* Joji - Can't Get Over You (Official Video).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8931249F2862456C00155E9B /* Joji - Can't Get Over You (Official Video).mp4 */; };
@@ -66,6 +66,8 @@
 		894076C8285870F20036A670 /* RecentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894076C7285870F20036A670 /* RecentCard.swift */; };
 		894A1DF128793CE000F80433 /* test_userImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A1DF028793CE000F80433 /* test_userImageView.swift */; };
 		894A1DF528795AA100F80433 /* legacyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A1DF428795AA100F80433 /* legacyViews.swift */; };
+		89637B8D287E8D5600D9E288 /* Lcl_CollabHubOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89637B8C287E8D5600D9E288 /* Lcl_CollabHubOverviewCard.swift */; };
+		89637B8F287E8DF600D9E288 /* Lcl_FanSpaceOverviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89637B8E287E8DF600D9E288 /* Lcl_FanSpaceOverviewCard.swift */; };
 		896F60BE285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */; };
 		896F60BF285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */; };
 		896F60C0285E1F4B00E99095 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */; };
@@ -111,7 +113,7 @@
 		891A4C7C285B080800538E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		891A4C80285B088B00538E38 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		89305088287C6B3A006B2098 /* Lcl_CreatorDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_CreatorDashboard.swift; sourceTree = "<group>"; };
-		8930508A287D5691006B2098 /* AnalyticsOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsOverviewCard.swift; sourceTree = "<group>"; };
+		8930508A287D5691006B2098 /* Lcl_AnalyticsOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_AnalyticsOverviewCard.swift; sourceTree = "<group>"; };
 		893124992861A45400155E9B /* NFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFirestoreManager.swift; sourceTree = "<group>"; };
 		8931249B2862422E00155E9B /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		8931249D286243A900155E9B /* Joji - Slow Dancing in the Dark (Live).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Joji - Slow Dancing in the Dark (Live).mp4"; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 		894076C7285870F20036A670 /* RecentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCard.swift; sourceTree = "<group>"; };
 		894A1DF028793CE000F80433 /* test_userImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_userImageView.swift; sourceTree = "<group>"; };
 		894A1DF428795AA100F80433 /* legacyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = legacyViews.swift; sourceTree = "<group>"; };
+		89637B8C287E8D5600D9E288 /* Lcl_CollabHubOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_CollabHubOverviewCard.swift; sourceTree = "<group>"; };
+		89637B8E287E8DF600D9E288 /* Lcl_FanSpaceOverviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lcl_FanSpaceOverviewCard.swift; sourceTree = "<group>"; };
 		896F60BD285E1F4B00E99095 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		89790C4D28546AF8007853BA /* WhiteTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89790C5028546AF8007853BA /* WhiteTigerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTigerApp.swift; sourceTree = "<group>"; };
@@ -234,7 +238,9 @@
 			isa = PBXGroup;
 			children = (
 				89305088287C6B3A006B2098 /* Lcl_CreatorDashboard.swift */,
-				8930508A287D5691006B2098 /* AnalyticsOverviewCard.swift */,
+				89637B8E287E8DF600D9E288 /* Lcl_FanSpaceOverviewCard.swift */,
+				8930508A287D5691006B2098 /* Lcl_AnalyticsOverviewCard.swift */,
+				89637B8C287E8D5600D9E288 /* Lcl_CollabHubOverviewCard.swift */,
 			);
 			path = "Artist's Dashboard";
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 				89790C7D285471DA007853BA /* TestView.swift in Sources */,
 				89795E2B287800A6004BD9B2 /* Lcl_TestHomeView.swift in Sources */,
 				8932A97A286C5AAE008E437B /* RecentLocalCard.swift in Sources */,
+				89637B8D287E8D5600D9E288 /* Lcl_CollabHubOverviewCard.swift in Sources */,
 				891A4C81285B088B00538E38 /* UserModel.swift in Sources */,
 				89790C7B28546B80007853BA /* ArtistMainView.swift in Sources */,
 				894A1DF528795AA100F80433 /* legacyViews.swift in Sources */,
@@ -564,9 +571,10 @@
 				89790C852855AED0007853BA /* ArtistProfileCard.swift in Sources */,
 				8931249A2861A45500155E9B /* NFirestoreManager.swift in Sources */,
 				8932A983286C86CD008E437B /* TestVideoView.swift in Sources */,
-				8930508B287D5691006B2098 /* AnalyticsOverviewCard.swift in Sources */,
+				8930508B287D5691006B2098 /* Lcl_AnalyticsOverviewCard.swift in Sources */,
 				8932A995286CA812008E437B /* TestView2.swift in Sources */,
 				893124AC2865ED8A00155E9B /* ZStackTestView.swift in Sources */,
+				89637B8F287E8DF600D9E288 /* Lcl_FanSpaceOverviewCard.swift in Sources */,
 				894076C8285870F20036A670 /* RecentCard.swift in Sources */,
 				89DFAB8A286F62EB00776758 /* Lcl_ArtistProfileCard.swift in Sources */,
 				893D45E7285B8509000EF7AA /* FirestoreManager.swift in Sources */,
